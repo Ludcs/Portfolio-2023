@@ -12,7 +12,7 @@ export const Me = () => {
   return (
     <>
       <MeContainer>
-        <Navbar />
+        {/* <Navbar /> */}
         <m.div
           initial={{opacity: 0}}
           animate={{opacity: 1}}
@@ -56,7 +56,7 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 1280px;
-  height: 600px;
+  height: 100vh;
   margin: 0 auto;
   justify-content: center;
   align-items: center;

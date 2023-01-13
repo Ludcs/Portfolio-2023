@@ -1,36 +1,36 @@
 import React, {useRef, useState} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import {Howl, Howler} from 'howler';
+// import {Howl, Howler} from 'howler';
 
 import Joy from '../assets/joystick-modified.png';
-import Play from '../assets/play-music-modified.png';
-import Pause from '../assets/pause-music-modified.png';
-import Mp3 from '../audio/knife-heartbeats.mp3';
+// import Play from '../assets/play-music-modified.png';
+// import Pause from '../assets/pause-music-modified.png';
+// import Mp3 from '../audio/knife-heartbeats.mp3';
 
 export const Navbar = () => {
-  const [music, setMusic] = useState(false);
+  // const [music, setMusic] = useState(false);
 
-  const sound = useRef(
-    new Howl({
-      src: [Mp3],
-      HTML5: true,
-      loop: true,
-      preload: true,
-    })
-  );
+  // const sound = useRef(
+  //   new Howl({
+  //     src: [Mp3],
+  //     HTML5: true,
+  //     loop: true,
+  //     preload: true,
+  //   })
+  // );
 
-  const handleMusic = () => {
-    Howler.volume(0.2);
-    if (music === false) {
-      setMusic(true);
-      sound.current.play();
-    }
-    if (music === true) {
-      setMusic(false);
-      sound.current.pause();
-    }
-  };
+  // const handleMusic = () => {
+  //   Howler.volume(0.2);
+  //   if (music === false) {
+  //     setMusic(true);
+  //     sound.current.play();
+  //   }
+  //   if (music === true) {
+  //     setMusic(false);
+  //     sound.current.pause();
+  //   }
+  // };
 
   return (
     <Nav>
@@ -40,23 +40,6 @@ export const Navbar = () => {
       <p>
         PLAYER 1: <span>Lucho Dc</span>
       </p>
-      {music ? (
-        <span title="Stop music">
-          <ImgsMusic
-            onClick={() => handleMusic()}
-            src={Pause}
-            alt="Pause Music Icon"
-          />
-        </span>
-      ) : (
-        <span title="Play music">
-          <ImgsMusic
-            onClick={() => handleMusic()}
-            src={Play}
-            alt="Play Music Icon"
-          />
-        </span>
-      )}
       <UlNav>
         <li>
           <Link to="/">Home</Link>
@@ -84,6 +67,15 @@ export const Navbar = () => {
 //   background-color: transparent;
 // `;
 
+const ContainerNavbar = styled.div`
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  /* position: absolute;
+  z-index: 1;
+  margin: 0 auto; */
+`;
+
 const Nav = styled.nav`
   width: 1280px;
   height: 100px;
@@ -91,6 +83,9 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+  left: 15%;
 
   & div img {
     width: 55px;
@@ -128,12 +123,12 @@ const Nav = styled.nav`
   }
 `;
 
-const ImgsMusic = styled.img`
-  width: 55px;
-  height: 55px;
-  margin-right: 10px;
-  cursor: pointer;
-`;
+// const ImgsMusic = styled.img`
+//   width: 55px;
+//   height: 55px;
+//   margin-right: 10px;
+//   cursor: pointer;
+// `;
 const UlNav = styled.ul`
   display: flex;
   flex-direction: row;

@@ -31,10 +31,6 @@ export const DIV = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(${BgSpace});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 `;
 
 const HelloContainer = styled.div`
@@ -44,6 +40,10 @@ const HelloContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(${BgSpace});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   & p {
     font-size: 24px;
     letter-spacing: 5px;

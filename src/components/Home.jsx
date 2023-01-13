@@ -9,56 +9,76 @@ import GithubIcon from '../assets/github-icon.png';
 import LinkedinIcon from '../assets/linkedin-icon.png';
 import CvPdf from '../assets/cv/Luciano-De-Carolis-CV.pdf';
 import CvIcon from '../assets/cv-icon.png';
+import BgSpace from '../assets/background-pixelart.png';
 import {Navbar} from './Navbar';
 
 export const Home = () => {
   return (
     <>
-      <Navbar />
-
-      <MainContainer>
-        <DivName>
-          <h1>Hi there! I'm:</h1>
-          <h3>
-            <Typewriter
-              options={{
-                strings: [
-                  'Frontend Developer',
-                  'Video Games Lover',
-                  'Beer & Music Lover',
-                ],
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 25,
-              }}
-            />
-          </h3>
-          <p style={{fontSize: '12px'}}>
-            <span style={{color: 'yellow'}}>JavaScript</span> -{' '}
-            <span style={{color: 'aqua'}}>React</span>
-          </p>
-          <IconsContainer>
-            <a href="https://github.com/Ludcs" target={'_blank'}>
-              <img src={GithubIcon} alt="Github Icon" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/luciano-de-carolis-36a751148/"
-              target={'_blank'}
-            >
-              <img src={LinkedinIcon} alt="Linkedin Icon" />
-            </a>
-            <a href={CvPdf} download="Luciano-De-Carolis-CV">
-              <img src={CvIcon} alt="Cv Icon" />
-            </a>
-          </IconsContainer>
-        </DivName>
-        <DivImage>
-          <img src={SoftDev} alt="Software Developer" />
-        </DivImage>
-      </MainContainer>
+      {/* <Navbar /> */}
+      <HomeContainer>
+        <m.div
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 0.5, ease: 'easeInOut'}}
+        >
+          <MainContainer>
+            <DivName>
+              <h1>Hi there! I'm:</h1>
+              <h3>
+                <Typewriter
+                  options={{
+                    strings: [
+                      'Frontend Developer',
+                      'Video Games Lover',
+                      'Beer & Music Lover',
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 25,
+                  }}
+                />
+              </h3>
+              <p style={{fontSize: '12px'}}>
+                <span style={{color: 'yellow'}}>JavaScript</span> -{' '}
+                <span style={{color: 'aqua'}}>React</span>
+              </p>
+              <IconsContainer>
+                <a href="https://github.com/Ludcs" target={'_blank'}>
+                  <img src={GithubIcon} alt="Github Icon" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/luciano-de-carolis-36a751148/"
+                  target={'_blank'}
+                >
+                  <img src={LinkedinIcon} alt="Linkedin Icon" />
+                </a>
+                <a href={CvPdf} download="Luciano-De-Carolis-CV">
+                  <img src={CvIcon} alt="Cv Icon" />
+                </a>
+              </IconsContainer>
+            </DivName>
+            <DivImage>
+              <img src={SoftDev} alt="Software Developer" />
+            </DivImage>
+          </MainContainer>
+        </m.div>
+      </HomeContainer>
     </>
   );
 };
+
+const HomeContainer = styled.div`
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(${BgSpace});
+  background-position: center;
+  background-repeat: no-repeat;
+`;
 
 const MainContainer = styled.div`
   display: flex;
@@ -66,7 +86,17 @@ const MainContainer = styled.div`
   margin: 0 auto;
   justify-content: space-evenly;
   align-items: center;
-  height: 500px;
+  height: 100vh;
+
+  /* box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(${BgSpace});
+  background-position: center;
+  background-repeat: no-repeat; */
 `;
 
 const DivName = styled.div`

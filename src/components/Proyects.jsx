@@ -9,37 +9,17 @@ export const Proyects = () => {
   return (
     <>
       <ProyectsContainer>
-        <Navbar />
+        {/* <Navbar /> */}
 
         <m.div
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           transition={{duration: 0.5, ease: 'easeInOut'}}
         >
-          {/* <Navbar /> */}
           <MainContainer>
             <h1>These are some of the projects i've done recently</h1>
           </MainContainer>
           <MarqueeFooter />
-          {/* <MarqueeComp
-          style={{
-            gradientWidth: 'none !important',
-          }}
-          direction={'right'}
-        >
-          <h4
-            style={{
-              color: '#bcf6e9',
-              fontSize: '16px',
-              margin: 0,
-              padding: '5px',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            HUMAN AFTER ALL - HUMAN AFTER ALL - HUMAN AFTER ALL - HUMAN AFTER
-            ALL - HUMAN AFTER ALL - HUMAN AFTER ALL - HUMAN AFTER ALL -{' '}
-          </h4>
-        </MarqueeComp> */}
         </m.div>
       </ProyectsContainer>
     </>
@@ -64,7 +44,7 @@ export const MainContainer = styled.div`
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 100vh;
   & h1 {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.87);
