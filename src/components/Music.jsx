@@ -57,7 +57,7 @@ const ContainerMusic = styled.div`
   position: absolute;
   top: 20px;
   left: 36%;
-  z-index: 1;
+  z-index: 50;
 `;
 
 const ImgsMusic = styled.img`

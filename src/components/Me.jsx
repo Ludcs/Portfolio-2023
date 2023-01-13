@@ -8,7 +8,7 @@ import {MarqueeFooter} from './MarqueeFooter';
 
 import BgForest from '../assets/forest-bg.jpg';
 
-export const Me = () => {
+export const Me = ({meText}) => {
   return (
     <>
       <MeContainer>
@@ -34,6 +34,7 @@ export const Me = () => {
               I am... <span>HUMAN AFTER ALL!</span>
             </p>
           </TextContainer>
+          <MarqueeFooter meText={meText} />
         </m.div>
       </MeContainer>
     </>

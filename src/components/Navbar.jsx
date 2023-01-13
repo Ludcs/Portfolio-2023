@@ -8,7 +8,7 @@ import Joy from '../assets/joystick-modified.png';
 // import Pause from '../assets/pause-music-modified.png';
 // import Mp3 from '../audio/knife-heartbeats.mp3';
 
-export const Navbar = () => {
+export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
   // const [music, setMusic] = useState(false);
 
   // const sound = useRef(
@@ -32,6 +32,20 @@ export const Navbar = () => {
   //   }
   // };
 
+  const changeToHome = () => {
+    setHomeText(true);
+  };
+
+  const changeToProyects = () => {
+    setHomeText(false);
+    setProyectsText(true);
+  };
+
+  const changeToMe = () => {
+    setHomeText(false);
+    setMeText(true);
+  };
+
   return (
     <Nav>
       <span>
@@ -42,39 +56,26 @@ export const Navbar = () => {
       </p>
       <UlNav>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={() => setHomeText(true)}>
+            Home
+          </Link>
         </li>
 
         <li>
-          <Link to="/proyects">Proyects</Link>
+          <Link to="/proyects" onClick={changeToProyects}>
+            Proyects
+          </Link>
         </li>
 
         <li>
-          <Link to="/me">Me</Link>
+          <Link to="/me" onClick={changeToMe}>
+            Me
+          </Link>
         </li>
       </UlNav>
     </Nav>
   );
 };
-
-// const ContainerNav = styled.div`
-//   box-sizing: border-box;
-//   padding: 0;
-//   margin: 0 auto;
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-//   background-color: transparent;
-// `;
-
-const ContainerNavbar = styled.div`
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-  /* position: absolute;
-  z-index: 1;
-  margin: 0 auto; */
-`;
 
 const Nav = styled.nav`
   width: 1280px;
@@ -123,12 +124,6 @@ const Nav = styled.nav`
   }
 `;
 
-// const ImgsMusic = styled.img`
-//   width: 55px;
-//   height: 55px;
-//   margin-right: 10px;
-//   cursor: pointer;
-// `;
 const UlNav = styled.ul`
   display: flex;
   flex-direction: row;

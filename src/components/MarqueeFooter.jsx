@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Marquee from 'react-fast-marquee';
 
-export const MarqueeFooter = ({text}) => {
+export const MarqueeFooter = ({proyectsText, meText, homeText}) => {
   return (
     <MarqueeComp
       style={{
@@ -17,9 +17,16 @@ export const MarqueeFooter = ({text}) => {
           padding: '5px',
           whiteSpace: 'nowrap',
           textTransform: 'uppercase',
+          letterSpacing: '3px',
         }}
       >
-        {text}
+        {homeText &&
+          'Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth -'}
+
+        {proyectsText &&
+          'Making things happen - Making things happen - Making things happen - Making things happen - Making things happen - Making things happen - Making things happen -'}
+        {meText &&
+          'Being human after all - Being human after all - Being human after all - Being human after all - Being human after all - Being human after all - Being human after all -'}
       </h4>
     </MarqueeComp>
   );
