@@ -1,6 +1,6 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import {Link, useLocation, NavLink} from 'react-router-dom';
 // import {Howl, Howler} from 'howler';
 
 import Joy from '../assets/joystick-modified.png';
@@ -9,31 +9,11 @@ import Joy from '../assets/joystick-modified.png';
 // import Mp3 from '../audio/knife-heartbeats.mp3';
 
 export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
-  // const [music, setMusic] = useState(false);
+  const location = useLocation();
+  //console.log(location.pathname);
 
-  // const sound = useRef(
-  //   new Howl({
-  //     src: [Mp3],
-  //     HTML5: true,
-  //     loop: true,
-  //     preload: true,
-  //   })
-  // );
-
-  // const handleMusic = () => {
-  //   Howler.volume(0.2);
-  //   if (music === false) {
-  //     setMusic(true);
-  //     sound.current.play();
-  //   }
-  //   if (music === true) {
-  //     setMusic(false);
-  //     sound.current.pause();
-  //   }
-  // };
-
-  const changeToHome = () => {
-    setHomeText(true);
+  let activeStyle = {
+    color: 'yellow',
   };
 
   const changeToProyects = () => {
@@ -56,21 +36,33 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
       </p>
       <UlNav>
         <li>
-          <Link to="/" onClick={() => setHomeText(true)}>
+          <NavLink
+            style={({isActive}) => (isActive ? activeStyle : undefined)}
+            to="/"
+            onClick={() => setHomeText(true)}
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link to="/proyects" onClick={changeToProyects}>
+          <NavLink
+            style={({isActive}) => (isActive ? activeStyle : undefined)}
+            to="/proyects"
+            onClick={changeToProyects}
+          >
             Proyects
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link to="/me" onClick={changeToMe}>
+          <NavLink
+            style={({isActive}) => (isActive ? activeStyle : undefined)}
+            to="/me"
+            onClick={changeToMe}
+          >
             Me
-          </Link>
+          </NavLink>
         </li>
       </UlNav>
     </Nav>

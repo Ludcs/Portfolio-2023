@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {motion as m} from 'framer-motion';
+// import {motion as m} from 'framer-motion';
 
 import BgSpace from '../assets/background-pixelart.png';
 import MyFace from '../assets/my-face.png';
@@ -9,17 +9,11 @@ import Stars from '../assets/three-stars.png';
 export const Hello = () => {
   return (
     <DIV>
-      <m.div
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{duration: 0.5, ease: 'easeInOut'}}
-      >
-        <HelloContainer>
-          <p>"PLAYERS GONNA PLAY"</p>
-          <img src={MyFace} alt="My pic profile" />
-          <StarsImg src={Stars} alt="Three stars" />
-        </HelloContainer>
-      </m.div>
+      <HelloContainer>
+        <p>"PLAYERS GONNA PLAY"</p>
+        <img src={MyFace} alt="My pic profile" />
+        <StarsImg src={Stars} alt="Three stars" />
+      </HelloContainer>
     </DIV>
   );
 };
