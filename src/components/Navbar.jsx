@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import styled from 'styled-components';
-import {Link, useLocation, NavLink} from 'react-router-dom';
+import {useLocation, NavLink, Link} from 'react-router-dom';
 // import {Howl, Howler} from 'howler';
 
 import Joy from '../assets/joystick-modified.png';
@@ -9,7 +9,7 @@ import Joy from '../assets/joystick-modified.png';
 // import Mp3 from '../audio/knife-heartbeats.mp3';
 
 export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
-  const location = useLocation();
+  //const location = useLocation();
   //console.log(location.pathname);
 
   let activeStyle = {
@@ -29,7 +29,9 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
   return (
     <Nav>
       <span>
-        <img style={{marginTop: '-5px'}} src={Joy} alt="Joystick Nes" />
+        <Link to={'/'}>
+          <img style={{marginTop: '-5px'}} src={Joy} alt="Joystick Nes" />
+        </Link>
       </span>
       <p>
         PLAYER 1: <span>Lucho Dc</span>
