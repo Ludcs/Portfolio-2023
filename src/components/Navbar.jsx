@@ -29,12 +29,12 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
   return (
     <Nav>
       <span>
-        <Link to={'/'}>
+        <Link to={'/'} onClick={() => setHomeText(true)}>
           <img style={{marginTop: '-5px'}} src={Joy} alt="Joystick Nes" />
         </Link>
       </span>
       <p>
-        PLAYER 1: <span>Lucho Dc</span>
+        <span id="p_player">PLAYER 1:</span> <span>Lucho Dc</span>
       </p>
       <UlNav>
         <li>
@@ -53,7 +53,7 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
             to="/proyects"
             onClick={changeToProyects}
           >
-            Proyects
+            Portfolio
           </NavLink>
         </li>
 
@@ -110,6 +110,9 @@ const Nav = styled.nav`
       rgb(70, 78, 93) 1.74541px -2.43999px 0px,
       rgb(70, 78, 93) 2.44769px -1.73459px 0px,
       rgb(70, 78, 93) 2.88051px -0.838247px 0px;
+  }
+  & #p_player {
+    color: #56f350;
   }
   & span img {
     width: 55px;

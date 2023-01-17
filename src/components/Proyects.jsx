@@ -24,12 +24,8 @@ export const Proyects = ({proyectsText}) => {
               <div>
                 <img src={Project1} alt="Project 1" />
                 <div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ullam quidem aliquam quaerat totam recusandae inventore
-                    nostrum, iste sunt quos dolor sit repellendus adipisci
-                    deserunt ut dolorem magni assumenda tempore veniam!
-                  </p>
+                  <p id="title_project">E-Commerce - Cart</p>
+                  <p>Vite + React + ChakraUi</p>
                   <p>
                     <a
                       href="https://carrito-simple-ludc.vercel.app/"
@@ -50,12 +46,8 @@ export const Proyects = ({proyectsText}) => {
               <div>
                 <img src={Project2} alt="Project 2" />
                 <div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ullam quidem aliquam quaerat totam recusandae inventore
-                    nostrum, iste sunt quos dolor sit repellendus adipisci
-                    deserunt ut dolorem magni assumenda tempore veniam!
-                  </p>
+                  <p id="title_project">Landing Page Layout</p>
+                  <p>Vite + React + ChakraUi</p>
                   <p>
                     <a
                       href="https://sunnyside-dun.vercel.app/"
@@ -76,12 +68,8 @@ export const Proyects = ({proyectsText}) => {
               <div>
                 <img src={Project3} alt="Project 3" />
                 <div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ullam quidem aliquam quaerat totam recusandae inventore
-                    nostrum, iste sunt quos dolor sit repellendus adipisci
-                    deserunt ut dolorem magni assumenda tempore veniam!
-                  </p>
+                  <p id="title_project">Adviency Calendar</p>
+                  <p>React + styled-components</p>
                   <p>
                     <a
                       href="https://adviency-luciano-dc.vercel.app/"
@@ -100,6 +88,12 @@ export const Proyects = ({proyectsText}) => {
                 </div>
               </div>
             </SectionProyects>
+            <p id="seemore">
+              See more on my{' '}
+              <a href="https://github.com/Ludcs" target={'_blank'}>
+                GitHub
+              </a>
+            </p>
           </MainContainer>
           <MarqueeFooter proyectsText={proyectsText} />
         </m.div>
@@ -151,6 +145,37 @@ export const MainContainer = styled.div`
       rgb(70, 78, 93) 2.44769px -1.73459px 0px,
       rgb(70, 78, 93) 2.88051px -0.838247px 0px;
   }
+  & #seemore {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.87);
+    text-shadow: rgb(70, 78, 93) 3px 0px 0px,
+      rgb(70, 78, 93) 2.83487px 0.981584px 0px,
+      rgb(70, 78, 93) 2.35766px 1.85511px 0px,
+      rgb(70, 78, 93) 1.62091px 2.52441px 0px,
+      rgb(70, 78, 93) 0.705713px 2.91581px 0px,
+      rgb(70, 78, 93) -0.287171px 2.98622px 0px,
+      rgb(70, 78, 93) -1.24844px 2.72789px 0px,
+      rgb(70, 78, 93) -2.07227px 2.16926px 0px,
+      rgb(70, 78, 93) -2.66798px 1.37182px 0px,
+      rgb(70, 78, 93) -2.96998px 0.42336px 0px,
+      rgb(70, 78, 93) -2.94502px -0.571704px 0px,
+      rgb(70, 78, 93) -2.59586px -1.50383px 0px,
+      rgb(70, 78, 93) -1.96093px -2.27041px 0px,
+      rgb(70, 78, 93) -1.11013px -2.78704px 0px,
+      rgb(70, 78, 93) -0.137119px -2.99686px 0px,
+      rgb(70, 78, 93) 0.850987px -2.87677px 0px,
+      rgb(70, 78, 93) 1.74541px -2.43999px 0px,
+      rgb(70, 78, 93) 2.44769px -1.73459px 0px,
+      rgb(70, 78, 93) 2.88051px -0.838247px 0px;
+    & a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease-in;
+      &:hover {
+        color: yellow;
+      }
+    }
+  }
 `;
 
 const SectionProyects = styled.div`
@@ -163,15 +188,18 @@ const SectionProyects = styled.div`
   gap: 30px;
   padding: 5px;
   margin-top: 30px;
+  margin-bottom: 30px;
   & div {
     position: relative;
     width: 100%;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-radius: 10px;
     & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: inherit;
     }
     & div {
       position: absolute;
@@ -183,17 +211,34 @@ const SectionProyects = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 25px;
       background-color: rgba(0, 0, 0, 0.75);
       opacity: 0;
       transition: all 0.25s ease-in-out;
+      border-radius: inherit;
       &:hover {
         opacity: 1;
+      }
+      & #title_project {
+        font-size: 16px;
+        text-transform: uppercase;
+        text-shadow: #f077f9 3px 0px 0px, #f077f9 2.83487px 0.981584px 0px,
+          #f077f9 2.35766px 1.85511px 0px, #f077f9 1.62091px 2.52441px 0px,
+          #f077f9 0.705713px 2.91581px 0px, #f077f9 -0.287171px 2.98622px 0px,
+          #f077f9 -1.24844px 2.72789px 0px, #f077f9 -2.07227px 2.16926px 0px,
+          #f077f9 -2.66798px 1.37182px 0px, #f077f9 -2.96998px 0.42336px 0px,
+          #f077f9 -2.94502px -0.571704px 0px, #f077f9 -2.59586px -1.50383px 0px,
+          #f077f9 -1.96093px -2.27041px 0px, #f077f9 -1.11013px -2.78704px 0px,
+          #f077f9 -0.137119px -2.99686px 0px, #f077f9 0.850987px -2.87677px 0px,
+          #f077f9 1.74541px -2.43999px 0px, #f077f9 2.44769px -1.73459px 0px,
+          #f077f9 2.88051px -0.838247px 0px;
       }
       & p {
         font-size: 14px;
         color: rgba(255, 255, 255, 0.87);
         text-align: center;
-        padding: 10px;
+        /* padding: 10px; */
+        margin: 0 !important;
       }
       & a {
         text-decoration: none;
