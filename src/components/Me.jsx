@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {motion as m} from 'framer-motion';
-// import {MarqueeComp} from '../App';
 import {Navbar} from './Navbar';
 import {MarqueeFooter} from './MarqueeFooter';
-// import {MainContainer} from './Proyects';
 
 import BgForest from '../assets/forest-bg.jpg';
 
@@ -54,6 +52,9 @@ const MeContainer = styled.div`
   background-image: url(${BgForest});
   background-position: center;
   background-repeat: no-repeat;
+  @media (max-width: 480px) {
+    background-position: 65% 70%;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -65,7 +66,10 @@ const TextContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 85vh;
+  }
   & h1 {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.87);
@@ -80,6 +84,12 @@ const TextContainer = styled.div`
       #36878a -0.137119px -2.99686px 0px, #36878a 0.850987px -2.87677px 0px,
       #36878a 1.74541px -2.43999px 0px, #36878a 2.44769px -1.73459px 0px,
       #36878a 2.88051px -0.838247px 0px;
+    @media (max-width: 480px) {
+      font-size: 16px;
+      margin-top: 50px;
+      margin-bottom: 0px;
+      padding: 0px 10px 0px 10px;
+    }
   }
   & div {
     width: 1000px;
@@ -105,6 +115,16 @@ const TextContainer = styled.div`
         rgb(70, 78, 93) 1.74541px -2.43999px 0px,
         rgb(70, 78, 93) 2.44769px -1.73459px 0px,
         rgb(70, 78, 93) 2.88051px -0.838247px 0px;
+    }
+    @media (max-width: 480px) {
+      width: 100%;
+      margin-top: 20px;
+      p {
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 25px;
+      }
     }
   }
   & span {

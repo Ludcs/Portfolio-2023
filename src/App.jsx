@@ -45,7 +45,7 @@ function App() {
             animate={{opacity: 1}}
             transition={{duration: 0.5, ease: 'easeInOut'}}
           >
-            <Music />
+            {/* <Music /> */}
             <Navbar
               setHomeText={setHomeText}
               setProyectsText={setProyectsText}
@@ -53,12 +53,10 @@ function App() {
             />
             <Routes>
               <Route exact path="/*" element={<Home homeText={homeText} />} />
-
               <Route
                 path="/proyects"
                 element={<Proyects proyectsText={proyectsText} />}
               />
-
               <Route path="/me" element={<Me meText={meText} />} />
             </Routes>
           </m.div>

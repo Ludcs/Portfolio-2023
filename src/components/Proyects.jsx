@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import BgClouds from '../assets/cloud-bg.jpg';
 import {motion as m} from 'framer-motion';
-// import {Navbar} from './Navbar';
 import {MarqueeFooter} from './MarqueeFooter';
 
 import Project1 from '../assets/img_project_0.jpg';
@@ -112,6 +111,9 @@ const ProyectsContainer = styled.div`
   background-image: url(${BgClouds});
   background-position: center;
   background-repeat: no-repeat;
+  @media (max-width: 480px) {
+    background-position: 8% 70%;
+  }
 `;
 
 export const MainContainer = styled.div`
@@ -122,8 +124,16 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
   & h1 {
     font-size: 24px;
+    @media (max-width: 480px) {
+      font-size: 12px;
+      text-align: center;
+      padding: 0px 10px 0px 10px;
+    }
     color: rgba(255, 255, 255, 0.87);
     text-shadow: rgb(70, 78, 93) 3px 0px 0px,
       rgb(70, 78, 93) 2.83487px 0.981584px 0px,
@@ -147,6 +157,10 @@ export const MainContainer = styled.div`
   }
   & #seemore {
     font-size: 16px;
+    @media (max-width: 480px) {
+      font-size: 12px;
+      text-align: center;
+    }
     color: rgba(255, 255, 255, 0.87);
     text-shadow: rgb(70, 78, 93) 3px 0px 0px,
       rgb(70, 78, 93) 2.83487px 0.981584px 0px,
@@ -189,12 +203,28 @@ const SectionProyects = styled.div`
   padding: 5px;
   margin-top: 30px;
   margin-bottom: 30px;
+  @media (max-width: 480px) {
+    width: 90%;
+    height: 65vh;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    overflow-y: scroll;
+  }
   & div {
     position: relative;
     width: 100%;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     border-radius: 10px;
+    @media (max-width: 480px) {
+      box-shadow: none;
+    }
     & img {
       width: 100%;
       height: 100%;
@@ -216,6 +246,9 @@ const SectionProyects = styled.div`
       opacity: 0;
       transition: all 0.25s ease-in-out;
       border-radius: inherit;
+      @media (max-width: 480px) {
+        gap: 12.5px;
+      }
       &:hover {
         opacity: 1;
       }
@@ -232,13 +265,18 @@ const SectionProyects = styled.div`
           #f077f9 -0.137119px -2.99686px 0px, #f077f9 0.850987px -2.87677px 0px,
           #f077f9 1.74541px -2.43999px 0px, #f077f9 2.44769px -1.73459px 0px,
           #f077f9 2.88051px -0.838247px 0px;
+        @media (max-width: 480px) {
+          font-size: 14px;
+        }
       }
       & p {
         font-size: 14px;
         color: rgba(255, 255, 255, 0.87);
         text-align: center;
-        /* padding: 10px; */
         margin: 0 !important;
+        @media (max-width: 480px) {
+          font-size: 12px;
+        }
       }
       & a {
         text-decoration: none;

@@ -33,31 +33,41 @@ export const Music = () => {
   return (
     <ContainerMusic>
       {music ? (
-        <span title="Stop music">
-          <ImgsMusic
-            onClick={() => handleMusic()}
-            src={Pause}
-            alt="Pause Music Icon"
-          />
-        </span>
+        <ImgsMusic
+          title="Pause music"
+          onClick={() => handleMusic()}
+          src={Pause}
+          alt="Pause Music Icon"
+        />
       ) : (
-        <span title="Play music">
-          <ImgsMusic
-            onClick={() => handleMusic()}
-            src={Play}
-            alt="Play Music Icon"
-          />
-        </span>
+        <ImgsMusic
+          title="Play music"
+          onClick={() => handleMusic()}
+          src={Play}
+          alt="Play Music Icon"
+        />
       )}
     </ContainerMusic>
   );
 };
 
 const ContainerMusic = styled.div`
-  position: absolute;
+  width: 55px;
+  height: 55px;
+  margin-left: 10px;
+  margin-top: -5px;
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 1;
+  }
+  /* position: absolute;
   top: 20px;
   left: 36%;
-  z-index: 50;
+  z-index: 50; */
 `;
 
 const ImgsMusic = styled.img`
@@ -65,4 +75,10 @@ const ImgsMusic = styled.img`
   height: 55px;
   margin-right: 10px;
   cursor: pointer;
+  object-fit: cover;
+  @media (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+    margin-right: 0px;
+  }
 `;

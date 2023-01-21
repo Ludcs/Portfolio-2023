@@ -4,22 +4,12 @@ import Marquee from 'react-fast-marquee';
 export const MarqueeFooter = ({proyectsText, meText, homeText}) => {
   return (
     <MarqueeComp
-      style={{
-        gradientWidth: 'none !important',
-      }}
+      // style={{
+      //   gradientWidth: 'none !important',
+      // }}
       direction={'right'}
     >
-      <h4
-        style={{
-          color: '#bcf6e9',
-          fontSize: '16px',
-          margin: 0,
-          padding: '5px',
-          whiteSpace: 'nowrap',
-          textTransform: 'uppercase',
-          letterSpacing: '3px',
-        }}
-      >
+      <h4>
         {homeText &&
           'Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth -'}
 
@@ -48,4 +38,21 @@ export const MarqueeComp = styled(Marquee)`
     #063164 -0.137119px -2.99686px 0px, #063164 0.850987px -2.87677px 0px,
     #063164 1.74541px -2.43999px 0px, #063164 2.44769px -1.73459px 0px,
     #063164 2.88051px -0.838247px 0px;
+  & h4 {
+    color: #bcf6e9;
+    font-size: 16px;
+    margin: 0;
+    padding: 5px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  @media (max-width: 480px) {
+    --gradient-width: 50px;
+    height: 60px;
+    h4 {
+      font-size: 12px;
+      letter-spacing: normal;
+    }
+  }
 `;

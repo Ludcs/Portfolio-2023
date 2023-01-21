@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import {motion as m} from 'framer-motion';
 
 import BgSpace from '../assets/background-pixelart.png';
 import MyFace from '../assets/my-face.png';
@@ -10,7 +9,7 @@ export const Hello = () => {
   return (
     <DIV>
       <HelloContainer>
-        <p>"PLAYERS GONNA PLAY"</p>
+        <p>PLAYERS GONNA PLAY</p>
         <img src={MyFace} alt="My pic profile" />
         <StarsImg src={Stars} alt="Three stars" />
       </HelloContainer>
@@ -29,6 +28,7 @@ export const DIV = styled.div`
 
 const HelloContainer = styled.div`
   width: 100%;
+  min-width: 350px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,9 +37,12 @@ const HelloContainer = styled.div`
   background-image: url(${BgSpace});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  @media (max-width: 480px) {
+    background-position: 25% 70%;
+  }
   & p {
     font-size: 24px;
+    text-align: center;
     letter-spacing: 5px;
     text-shadow: rgb(70, 78, 93) 3px 0px 0px,
       rgb(70, 78, 93) 2.83487px 0.981584px 0px,
@@ -60,6 +63,14 @@ const HelloContainer = styled.div`
       rgb(70, 78, 93) 1.74541px -2.43999px 0px,
       rgb(70, 78, 93) 2.44769px -1.73459px 0px,
       rgb(70, 78, 93) 2.88051px -0.838247px 0px;
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 32px;
+      letter-spacing: 8px;
+    }
+    @media (min-width: 481px) and (max-width: 767px) {
+      font-size: 18px;
+    }
   }
   & img {
     opacity: 0.8;
