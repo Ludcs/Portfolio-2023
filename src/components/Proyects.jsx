@@ -114,12 +114,19 @@ const ProyectsContainer = styled.div`
   @media (max-width: 480px) {
     background-position: 8% 70%;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    background-size: cover;
+  }
+  @media (min-width: 1000px) and (max-width: 1368px) {
+    background-position: 25% 75%;
+  }
 `;
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1280px;
+  min-width: 350px;
+  max-width: 1200px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -127,12 +134,21 @@ export const MainContainer = styled.div`
   @media (max-width: 480px) {
     width: 100%;
   }
+
   & h1 {
     font-size: 24px;
     @media (max-width: 480px) {
       font-size: 12px;
       text-align: center;
       padding: 0px 10px 0px 10px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 18px;
+      text-align: center;
+    }
+    @media (min-width: 1025px) and (max-width: 1368px) {
+      font-size: 18px;
+      text-align: center;
     }
     color: rgba(255, 255, 255, 0.87);
     text-shadow: rgb(70, 78, 93) 3px 0px 0px,
@@ -160,6 +176,13 @@ export const MainContainer = styled.div`
     @media (max-width: 480px) {
       font-size: 12px;
       text-align: center;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 18px;
+      letter-spacing: 3px;
+    }
+    @media (min-width: 1025px) and (max-width: 1368px) {
+      font-size: 16px;
     }
     color: rgba(255, 255, 255, 0.87);
     text-shadow: rgb(70, 78, 93) 3px 0px 0px,
@@ -216,6 +239,26 @@ const SectionProyects = styled.div`
     padding: 10px;
     overflow-y: scroll;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 80%;
+    height: 65vh;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+  @media (min-width: 1025px) and (max-width: 1368px) {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
   & div {
     position: relative;
     width: 100%;
@@ -224,6 +267,13 @@ const SectionProyects = styled.div`
     border-radius: 10px;
     @media (max-width: 480px) {
       box-shadow: none;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      box-shadow: none;
+      border-radius: 10px;
     }
     & img {
       width: 100%;
@@ -248,6 +298,9 @@ const SectionProyects = styled.div`
       border-radius: inherit;
       @media (max-width: 480px) {
         gap: 12.5px;
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        gap: 50px;
       }
       &:hover {
         opacity: 1;

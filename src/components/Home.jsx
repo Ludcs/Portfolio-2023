@@ -2,16 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect';
 import {motion as m} from 'framer-motion';
-import Marquee from 'react-fast-marquee';
-
 import SoftDev from '../assets/soft-developer-pixel-art.png';
 import GithubIcon from '../assets/github-icon.png';
 import LinkedinIcon from '../assets/linkedin-icon.png';
 import CvPdf from '../assets/cv/Luciano-De-Carolis-CV.pdf';
 import CvIcon from '../assets/cv-icon.png';
 import BgSpace from '../assets/background-pixelart.png';
-import {Navbar} from './Navbar';
-import {MenuIcon} from './MenuIcon';
 
 export const Home = () => {
   return (
@@ -22,7 +18,6 @@ export const Home = () => {
           animate={{opacity: 1}}
           transition={{duration: 0.5, ease: 'easeInOut'}}
         >
-          {/* <MenuIcon /> */}
           <MainContainer>
             <DivName>
               <h1>Hi there! I'm:</h1>
@@ -82,20 +77,32 @@ const HomeContainer = styled.div`
   @media (max-width: 480px) {
     background-position: 25% 70%;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    background-size: cover;
+  }
+  @media (min-width: 1000px) and (max-width: 1368px) {
+    background-position: 25% 75%;
+  }
 `;
 
 const MainContainer = styled.div`
   display: flex;
-  @media (max-width: 480px) {
-    flex-direction: column;
-    height: 85vh;
-  }
   min-width: 350px;
   max-width: 1200px;
   margin: 0 auto;
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    height: 85vh;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+  }
 `;
 
 const DivName = styled.div`
@@ -133,6 +140,19 @@ const DivName = styled.div`
       margin: 0;
     }
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    text-align: center;
+    padding-bottom: 70px;
+    & h1 {
+      font-size: 30px;
+    }
+    & h3 {
+      font-size: 24px;
+    }
+    & p span {
+      font-size: 18px;
+    }
+  }
 `;
 
 const IconsContainer = styled.div`
@@ -142,14 +162,22 @@ const IconsContainer = styled.div`
   & img {
     width: 40px;
     height: 40px;
-    @media (max-width: 480px) {
-      width: 30px;
-      height: 30px;
-    }
     opacity: 0.7;
     transition: ease 0.3s;
     &:hover {
       opacity: 1;
+    }
+    @media (max-width: 480px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    justify-content: center;
+    gap: 50px;
+    img {
+      width: 50px;
+      height: 50px;
     }
   }
 `;
@@ -164,10 +192,6 @@ const DivImage = styled.div`
     border-radius: 50%;
     width: 350px;
     height: 350px;
-    @media (max-width: 480px) {
-      width: 300px;
-      height: 300px;
-    }
     opacity: 0.7;
     @keyframes float {
       0% {
@@ -182,6 +206,14 @@ const DivImage = styled.div`
         box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
         transform: translatey(0px);
       }
+    }
+    @media (max-width: 480px) {
+      width: 300px;
+      height: 300px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 400px;
+      height: 400px;
     }
   }
 `;

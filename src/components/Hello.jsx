@@ -40,6 +40,15 @@ const HelloContainer = styled.div`
   @media (max-width: 480px) {
     background-position: 25% 70%;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    background-size: cover;
+    & p {
+      font-size: 24px;
+    }
+  }
+  @media (min-width: 1000px) and (max-width: 1368px) {
+    background-position: 25% 75%;
+  }
   & p {
     font-size: 24px;
     text-align: center;
@@ -68,8 +77,8 @@ const HelloContainer = styled.div`
       line-height: 32px;
       letter-spacing: 8px;
     }
-    @media (min-width: 481px) and (max-width: 767px) {
-      font-size: 18px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 24px;
     }
   }
   & img {

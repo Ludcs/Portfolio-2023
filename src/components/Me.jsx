@@ -55,12 +55,16 @@ const MeContainer = styled.div`
   @media (max-width: 480px) {
     background-position: 65% 70%;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    background-size: cover;
+  }
 `;
 
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1280px;
+  min-width: 350px;
+  max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
   justify-content: center;
@@ -70,6 +74,17 @@ const TextContainer = styled.div`
     width: 100%;
     height: 85vh;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    /* height: 800px; */
+    margin: 0 auto;
+  }
+
   & h1 {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.87);
@@ -94,6 +109,10 @@ const TextContainer = styled.div`
   & div {
     width: 1000px;
     margin: 0 auto;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 100%;
+      margin: 0 auto;
+    }
     & p {
       line-height: 30px;
       text-shadow: rgb(70, 78, 93) 3px 0px 0px,
@@ -124,6 +143,15 @@ const TextContainer = styled.div`
         padding-left: 10px;
         padding-right: 10px;
         line-height: 25px;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      p {
+        font-size: 18px;
+        line-height: 35px;
+        letter-spacing: 1.5px;
+        padding-left: 50px;
+        padding-right: 50px;
       }
     }
   }

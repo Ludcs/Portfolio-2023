@@ -52,11 +52,13 @@ export const Music = () => {
 };
 
 const ContainerMusic = styled.div`
-  width: 55px;
-  height: 55px;
-  margin-left: 10px;
-  margin-top: -5px;
-  @media (max-width: 767px) {
+  @media (min-width: 1025px) {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-top: -5px;
+  }
+  @media (max-width: 480px) {
     position: absolute;
     top: 15px;
     left: 10px;
@@ -64,21 +66,34 @@ const ContainerMusic = styled.div`
     margin-top: 0px;
     z-index: 1;
   }
-  /* position: absolute;
-  top: 20px;
-  left: 36%;
-  z-index: 50; */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 1;
+  }
 `;
 
 const ImgsMusic = styled.img`
-  width: 55px;
-  height: 55px;
-  margin-right: 10px;
-  cursor: pointer;
-  object-fit: cover;
-  @media (max-width: 767px) {
+  @media (min-width: 1025px) {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  @media (max-width: 480px) {
     width: 40px;
     height: 40px;
+    margin-right: 0px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 50px;
+    height: 50px;
     margin-right: 0px;
   }
 `;

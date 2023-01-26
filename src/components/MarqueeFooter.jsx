@@ -3,12 +3,7 @@ import Marquee from 'react-fast-marquee';
 
 export const MarqueeFooter = ({proyectsText, meText, homeText}) => {
   return (
-    <MarqueeComp
-      // style={{
-      //   gradientWidth: 'none !important',
-      // }}
-      direction={'right'}
-    >
+    <MarqueeComp className="overlay" direction={'right'}>
       <h4>
         {homeText &&
           'Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth -'}
@@ -48,11 +43,28 @@ export const MarqueeComp = styled(Marquee)`
     letter-spacing: 3px;
   }
   @media (max-width: 480px) {
-    --gradient-width: 50px;
+    .overlay::after {
+      width: 70px;
+    }
+    .overlay::before {
+      width: 70px;
+    }
     height: 60px;
     h4 {
       font-size: 12px;
       letter-spacing: normal;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1368px) {
+    .overlay::after {
+      width: 100px;
+    }
+    .overlay::before {
+      width: 100px;
+    }
+    height: 80px;
+    h4 {
+      font-size: 14px;
     }
   }
 `;

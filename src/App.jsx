@@ -1,15 +1,8 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from 'react-router-dom';
+import {Routes, Route, useNavigate} from 'react-router-dom';
 import './App.css';
 import {DIV, Hello} from './components/Hello';
 import {useState, useEffect} from 'react';
 import {motion as m} from 'framer-motion';
-
-import {Music} from './components/Music';
 import {Home} from './components/Home';
 import {Proyects} from './components/Proyects';
 import {Me} from './components/Me';
@@ -45,7 +38,6 @@ function App() {
             animate={{opacity: 1}}
             transition={{duration: 0.5, ease: 'easeInOut'}}
           >
-            {/* <Music /> */}
             <Navbar
               setHomeText={setHomeText}
               setProyectsText={setProyectsText}
