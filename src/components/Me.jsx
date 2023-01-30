@@ -8,43 +8,43 @@ export const Me = ({meText}) => {
   return (
     <>
       <MeContainer>
-        <m.div
+        {/* <m.div
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           transition={{duration: 0.5, ease: 'easeInOut'}}
-        >
-          <TextContainer>
-            <h1>Okay! A little bit about me:</h1>
-            <div>
-              <p>
-                A front-end web developer from Argentina who loves technology
-                and the internet ecosystem. Video game player from a very very
-                young age.
-              </p>
-              <p>
-                I enjoy learning and creating new things. I enjoy sharing good
-                beer and good music with my homies.
-              </p>
-              <p>
-                I am curious, competitive, patient and self-demanding. I am many
-                more things...
-              </p>
-              <p>
-                I am... <span>HUMAN AFTER ALL!</span>
-              </p>
-            </div>
-          </TextContainer>
-          <MarqueeFooter meText={meText} />
-        </m.div>
+        > */}
+        <TextContainer>
+          <h1>Okay! A little bit about me:</h1>
+          <div>
+            <p>
+              A front-end web developer from Argentina who loves technology and
+              the internet ecosystem. Video game player from a very very young
+              age.
+            </p>
+            <p>
+              I enjoy learning and creating new things. I enjoy sharing good
+              beer and good music with my homies.
+            </p>
+            <p>
+              I am curious, competitive, patient and self-demanding. I am many
+              more things...
+            </p>
+            <p>
+              I am... <span>HUMAN AFTER ALL!</span>
+            </p>
+          </div>
+        </TextContainer>
+        <MarqueeFooter meText={meText} />
+        {/* </m.div> */}
       </MeContainer>
     </>
   );
 };
 
 const MeContainer = styled.div`
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -62,12 +62,14 @@ const MeContainer = styled.div`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 350px;
-  max-width: 1200px;
-  height: 100vh;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
+  min-width: 350px;
+  max-width: 1200px;
+  width: 1200px;
+  height: 500px;
+  /* height: 100vh;
+  margin: 0 auto; */
   text-align: center;
   @media (max-width: 480px) {
     width: 100%;
@@ -104,8 +106,9 @@ const TextContainer = styled.div`
     }
   }
   & div {
-    width: 1000px;
-    margin: 0 auto;
+    display: inline-grid;
+    width: 100%;
+    gap: 30px;
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 100%;
       margin: 0 auto;

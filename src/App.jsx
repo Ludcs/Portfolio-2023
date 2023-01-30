@@ -1,6 +1,6 @@
 import {Routes, Route, useNavigate} from 'react-router-dom';
-import './App.css';
-import {DIV, Hello} from './components/Hello';
+// import './App.css';
+import {Hello} from './components/Hello';
 import {useState, useEffect} from 'react';
 import {motion as m} from 'framer-motion';
 import {Home} from './components/Home';
@@ -32,7 +32,7 @@ function App() {
       {sayHello ? (
         <Hello />
       ) : (
-        <DIV>
+        <>
           <m.div
             initial={{opacity: 0}}
             animate={{opacity: 1}}
@@ -59,7 +59,7 @@ function App() {
           >
             <MarqueeFooter homeText={homeText} />
           </m.div>
-        </DIV>
+        </>
       )}
     </>
   );

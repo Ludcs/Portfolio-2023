@@ -6,24 +6,13 @@ import Stars from '../assets/three-stars.png';
 
 export const Hello = () => {
   return (
-    <DIV>
-      <HelloContainer>
-        <p>PLAYERS GONNA PLAY</p>
-        <img src={MyFace} alt="My pic profile" />
-        <StarsImg src={Stars} alt="Three stars" />
-      </HelloContainer>
-    </DIV>
+    <HelloContainer>
+      <p>PLAYERS GONNA PLAY</p>
+      <img src={MyFace} alt="My pic profile" />
+      <StarsImg src={Stars} alt="Three stars" />
+    </HelloContainer>
   );
 };
-
-export const DIV = styled.div`
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-  height: 100%;
-`;
 
 const HelloContainer = styled.div`
   width: 100%;

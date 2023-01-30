@@ -43,13 +43,15 @@ export const MarqueeComp = styled(Marquee)`
     letter-spacing: 3px;
   }
   @media (max-width: 480px) {
+    position: absolute;
+    bottom: 0px;
+    height: 60px;
     .overlay::after {
       width: 70px;
     }
     .overlay::before {
       width: 70px;
     }
-    height: 60px;
     h4 {
       font-size: 12px;
       letter-spacing: normal;

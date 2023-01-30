@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import BgClouds from '../assets/cloud-bg.jpg';
-import {motion as m} from 'framer-motion';
 import {MarqueeFooter} from './MarqueeFooter';
 import Project1 from '../assets/img_project_0.jpg';
 import Project2 from '../assets/img_project_01.jpg';
@@ -11,105 +10,97 @@ export const Proyects = ({proyectsText}) => {
   return (
     <>
       <ProyectsContainer>
-        <m.div
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
-          transition={{duration: 0.5, ease: 'easeInOut'}}
-        >
-          <MainContainer>
-            <h1>These are some of the projects i've done recently</h1>
-            <SectionProyects>
+        <MainContainer>
+          <h1>These are some of the projects i've done recently</h1>
+          <SectionProyects>
+            <div>
+              <img src={Project1} alt="Project 1" />
               <div>
-                <img src={Project1} alt="Project 1" />
-                <div>
-                  <p id="title_project">E-Commerce - Cart</p>
-                  <p>Vite + React + ChakraUi</p>
-                  <p>
-                    <a
-                      href="https://carrito-simple-ludc.vercel.app/"
-                      target={'_blank'}
-                    >
-                      PLAY
-                    </a>{' '}
-                    -{' '}
-                    <a
-                      href="https://github.com/Ludcs/carrito-simple"
-                      target={'_blank'}
-                    >
-                      VIEW CODE
-                    </a>
-                  </p>
-                </div>
+                <p id="title_project">E-Commerce - Cart</p>
+                <p>Vite + React + ChakraUi</p>
+                <p>
+                  <a
+                    href="https://carrito-simple-ludc.vercel.app/"
+                    target={'_blank'}
+                  >
+                    PLAY
+                  </a>{' '}
+                  -{' '}
+                  <a
+                    href="https://github.com/Ludcs/carrito-simple"
+                    target={'_blank'}
+                  >
+                    VIEW CODE
+                  </a>
+                </p>
               </div>
+            </div>
+            <div>
+              <img src={Project2} alt="Project 2" />
               <div>
-                <img src={Project2} alt="Project 2" />
-                <div>
-                  <p id="title_project">Landing Page Layout</p>
-                  <p>Vite + React + ChakraUi</p>
-                  <p>
-                    <a
-                      href="https://sunnyside-dun.vercel.app/"
-                      target={'_blank'}
-                    >
-                      PLAY
-                    </a>{' '}
-                    -{' '}
-                    <a
-                      href="https://github.com/Ludcs/ChakraUi-primer-practica"
-                      target={'_blank'}
-                    >
-                      VIEW CODE
-                    </a>
-                  </p>
-                </div>
+                <p id="title_project">Landing Page Layout</p>
+                <p>Vite + React + ChakraUi</p>
+                <p>
+                  <a href="https://sunnyside-dun.vercel.app/" target={'_blank'}>
+                    PLAY
+                  </a>{' '}
+                  -{' '}
+                  <a
+                    href="https://github.com/Ludcs/ChakraUi-primer-practica"
+                    target={'_blank'}
+                  >
+                    VIEW CODE
+                  </a>
+                </p>
               </div>
+            </div>
+            <div>
+              <img src={Project3} alt="Project 3" />
               <div>
-                <img src={Project3} alt="Project 3" />
-                <div>
-                  <p id="title_project">Adviency Calendar</p>
-                  <p>React + styled-components</p>
-                  <p>
-                    <a
-                      href="https://adviency-luciano-dc.vercel.app/"
-                      target={'_blank'}
-                    >
-                      PLAY
-                    </a>{' '}
-                    -{' '}
-                    <a
-                      href="https://github.com/Ludcs/adviency"
-                      target={'_blank'}
-                    >
-                      VIEW CODE
-                    </a>
-                  </p>
-                </div>
+                <p id="title_project">Adviency Calendar</p>
+                <p>React + styled-components</p>
+                <p>
+                  <a
+                    href="https://adviency-luciano-dc.vercel.app/"
+                    target={'_blank'}
+                  >
+                    PLAY
+                  </a>{' '}
+                  -{' '}
+                  <a href="https://github.com/Ludcs/adviency" target={'_blank'}>
+                    VIEW CODE
+                  </a>
+                </p>
               </div>
-            </SectionProyects>
-            <p id="seemore">
-              See more on my{' '}
-              <a href="https://github.com/Ludcs" target={'_blank'}>
-                GitHub
-              </a>
-            </p>
-          </MainContainer>
-          <MarqueeFooter proyectsText={proyectsText} />
-        </m.div>
+            </div>
+          </SectionProyects>
+          <p id="seemore">
+            See more on my{' '}
+            <a href="https://github.com/Ludcs" target={'_blank'}>
+              GitHub
+            </a>
+          </p>
+        </MainContainer>
+        <MarqueeFooter proyectsText={proyectsText} />
       </ProyectsContainer>
     </>
   );
 };
 
 const ProyectsContainer = styled.div`
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
   background-image: url(${BgClouds});
   background-position: center;
   background-repeat: no-repeat;
+
   @media (max-width: 480px) {
     background-position: 8% 70%;
   }
@@ -124,12 +115,14 @@ const ProyectsContainer = styled.div`
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 350px;
-  max-width: 1200px;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-width: 350px;
+  max-width: 1200px;
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  /* height: 100vh; */
   @media (max-width: 480px) {
     width: 100%;
   }
@@ -215,8 +208,8 @@ export const MainContainer = styled.div`
 `;
 
 const SectionProyects = styled.div`
-  width: 1280px;
-  height: 400px;
+  width: 1200px;
+  height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

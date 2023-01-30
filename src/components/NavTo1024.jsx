@@ -74,14 +74,36 @@ export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
 };
 
 const Nav = styled.nav`
-  @media (max-width: 480px) {
-    width: 100%;
-    height: 60px;
+  @media (min-width: 350px) and (max-width: 480px) {
+    /* width: 100%;
+    height: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center; */
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 180px;
+    margin: 0 auto;
+    background-color: rgb(1, 35, 69);
+    background: linear-gradient(
+      0deg,
+      rgba(1, 35, 69, 1) 0%,
+      rgba(1, 71, 145, 1) 35%,
+      rgba(61, 136, 187, 1) 100%
+    );
+    .notonmobile {
+      display: none;
+    }
   }
-  @media (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
     position: absolute;
     z-index: 1;
     left: 0;
@@ -107,7 +129,19 @@ const Nav = styled.nav`
 `;
 
 const UlNav = styled.ul`
-  @media (max-width: 1024px) {
+  @media (min-width: 350px) and (max-width: 480px) {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    list-style: none;
+    padding-left: 0px !important;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
     margin: 0 auto;
     display: flex;
     flex-direction: column;

@@ -13,67 +13,62 @@ export const Home = () => {
   return (
     <>
       <HomeContainer>
-        <m.div
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
-          transition={{duration: 0.5, ease: 'easeInOut'}}
-        >
-          <MainContainer>
-            <DivName>
-              <h1>It's me, Lucho! I'm:</h1>
-              <h3>
-                <Typewriter
-                  options={{
-                    strings: [
-                      'Frontend Developer',
-                      'Video Games Lover',
-                      'Beer & Music Lover',
-                    ],
-                    autoStart: true,
-                    loop: true,
-                    deleteSpeed: 25,
-                  }}
-                />
-              </h3>
-              <p style={{fontSize: '12px'}}>
-                <span style={{color: 'yellow'}}>JavaScript</span> -{' '}
-                <span style={{color: 'aqua'}}>React</span>
-              </p>
-              <IconsContainer>
-                <a href="https://github.com/Ludcs" target={'_blank'}>
-                  <img src={GithubIcon} alt="Github Icon" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/luciano-de-carolis-36a751148/"
-                  target={'_blank'}
-                >
-                  <img src={LinkedinIcon} alt="Linkedin Icon" />
-                </a>
-                <a href={CvPdf} download="Luciano-De-Carolis-CV">
-                  <img src={CvIcon} alt="Cv Icon" />
-                </a>
-              </IconsContainer>
-            </DivName>
-            <DivImage>
-              <img src={SoftDev} alt="Software Developer" />
-            </DivImage>
-          </MainContainer>
-        </m.div>
+        <MainContainer>
+          <DivName>
+            <h1>It's me, Lucho! I'm:</h1>
+            <h3>
+              <Typewriter
+                options={{
+                  strings: [
+                    'Frontend Developer',
+                    'Video Games Lover',
+                    'Beer & Music Lover',
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  deleteSpeed: 25,
+                }}
+              />
+            </h3>
+            <p style={{fontSize: '12px'}}>
+              <span style={{color: 'yellow'}}>JavaScript</span> -{' '}
+              <span style={{color: 'aqua'}}>React</span>
+            </p>
+            <IconsContainer>
+              <a href="https://github.com/Ludcs" target={'_blank'}>
+                <img src={GithubIcon} alt="Github Icon" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/luciano-de-carolis-36a751148/"
+                target={'_blank'}
+              >
+                <img src={LinkedinIcon} alt="Linkedin Icon" />
+              </a>
+              <a href={CvPdf} download="Luciano-De-Carolis-CV">
+                <img src={CvIcon} alt="Cv Icon" />
+              </a>
+            </IconsContainer>
+          </DivName>
+          <DivImage>
+            <img src={SoftDev} alt="Software Developer" />
+          </DivImage>
+        </MainContainer>
       </HomeContainer>
     </>
   );
 };
 
 const HomeContainer = styled.div`
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
   background-image: url(${BgSpace});
   background-position: center;
   background-repeat: no-repeat;
+
   @media (max-width: 480px) {
     background-position: 25% 70%;
   }
@@ -87,29 +82,36 @@ const HomeContainer = styled.div`
 
 const MainContainer = styled.div`
   display: flex;
-  min-width: 350px;
-  max-width: 1200px;
-  margin: 0 auto;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  min-width: 350px;
+  max-width: 1200px;
+  width: 1200px;
+  height: 500px;
+  /* margin: 0 auto; */
+  /* height: 100vh; */
+
   @media (max-width: 480px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* height: 600px; */
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 700px;
   }
 `;
 
 const DivName = styled.div`
-  background-color: transparent;
-  width: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 350px;
+  gap: 30px;
   h1 {
     font-size: 26px;
     text-shadow: #07468a 3px 0px 0px, #07468a 2.83487px 0.981584px 0px,
@@ -130,7 +132,7 @@ const DivName = styled.div`
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     & h1 {
       font-size: 16px;
       margin: 0;
@@ -145,7 +147,7 @@ const DivName = styled.div`
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     text-align: center;
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
     & h1 {
       font-size: 26px;
     }
@@ -192,7 +194,19 @@ const DivImage = styled.div`
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
   @media (max-width: 480px) {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   & img {
     border-radius: 50%;
@@ -216,10 +230,34 @@ const DivImage = styled.div`
     @media (max-width: 480px) {
       width: 250px;
       height: 250px;
+      object-fit: cover;
+      @keyframes float {
+        0% {
+          transform: translatey(0px);
+        }
+        50% {
+          transform: translatey(-20px);
+        }
+        100% {
+          transform: translatey(0px);
+        }
+      }
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 400px;
       height: 400px;
+      object-fit: cover;
+      @keyframes float {
+        0% {
+          transform: translatey(0px);
+        }
+        50% {
+          transform: translatey(-20px);
+        }
+        100% {
+          transform: translatey(0px);
+        }
+      }
     }
   }
 `;
