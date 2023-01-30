@@ -27,6 +27,15 @@ const HelloContainer = styled.div`
   background-repeat: no-repeat;
   @media (max-width: 480px) {
     background-position: 25% 70%;
+    width: 100%;
+    min-width: 350px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
