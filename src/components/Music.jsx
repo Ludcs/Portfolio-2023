@@ -60,7 +60,7 @@ const ContainerMusic = styled.div`
   @media (max-width: 480px) {
     position: absolute;
     top: 15px;
-    left: 10px;
+    left: 15px;
     margin-left: 0px;
     margin-top: 0px;
     z-index: 1;

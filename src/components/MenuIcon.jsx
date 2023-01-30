@@ -29,7 +29,7 @@ const ImgContainer = styled.div`
   @media (max-width: 480px) {
     position: absolute;
     top: 15px;
-    right: 10px;
+    right: 15px;
     z-index: 1;
     width: 40px;
     height: 40px;

@@ -94,8 +94,10 @@ const MainContainer = styled.div`
   align-items: center;
   height: 100vh;
   @media (max-width: 480px) {
+    display: flex;
     flex-direction: column;
-    height: 85vh;
+    justify-content: center;
+    align-items: center;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     flex-direction: column;
@@ -128,7 +130,7 @@ const DivName = styled.div`
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 50px;
+    margin-bottom: 50px;
     & h1 {
       font-size: 16px;
       margin: 0;
@@ -189,6 +191,9 @@ const DivImage = styled.div`
   overflow: hidden;
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
+  @media (max-width: 480px) {
+    margin-bottom: 50px;
+  }
   & img {
     border-radius: 50%;
     width: 350px;
@@ -209,8 +214,8 @@ const DivImage = styled.div`
       }
     }
     @media (max-width: 480px) {
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 250px;
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 400px;
