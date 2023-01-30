@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    navigate('/*', {replace: true});
+    navigate('/', {replace: true});
   }, []);
 
   return (
