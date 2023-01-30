@@ -3,7 +3,6 @@ import {NavLink, Link} from 'react-router-dom';
 import styled from 'styled-components';
 import {Music} from './Music';
 import {MenuIcon} from './MenuIcon';
-import {motion as m} from 'framer-motion';
 
 export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
   const [clickedNav, setClickedNav] = useState(false);
@@ -32,6 +31,7 @@ export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
   return (
     <>
       <Music />
+
       {clickedNav && (
         <Nav>
           <UlNav>
@@ -65,10 +65,6 @@ export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
               </NavLink>
             </li>
           </UlNav>
-          {/* <div className="languageContainer">
-            <p>ENG</p>
-            <p>SPA</p>
-          </div> */}
         </Nav>
       )}
 
@@ -78,21 +74,6 @@ export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
 };
 
 const Nav = styled.nav`
-  /* @media (min-width: 1025px) {
-    width: 1160px;
-    max-width: 1200px;
-    height: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-  } */
-
   @media (max-width: 480px) {
     width: 100%;
     height: 60px;
@@ -122,80 +103,10 @@ const Nav = styled.nav`
     .notonmobile {
       display: none;
     }
-    /* .languageContainer {
-      width: 100%;
-      height: 50px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-end;
-      position: absolute;
-      bottom: 0px;
-      margin-left: auto;
-      margin-right: auto;
-      p {
-        color: yellow;
-        font-size: 12px;
-      }
-    } */
   }
-  /* & p {
-    width: 25%;
-    margin-right: 10px;
-    margin-left: 10px;
-    text-shadow: rgb(70, 78, 93) 3px 0px 0px,
-      rgb(70, 78, 93) 2.83487px 0.981584px 0px,
-      rgb(70, 78, 93) 2.35766px 1.85511px 0px,
-      rgb(70, 78, 93) 1.62091px 2.52441px 0px,
-      rgb(70, 78, 93) 0.705713px 2.91581px 0px,
-      rgb(70, 78, 93) -0.287171px 2.98622px 0px,
-      rgb(70, 78, 93) -1.24844px 2.72789px 0px,
-      rgb(70, 78, 93) -2.07227px 2.16926px 0px,
-      rgb(70, 78, 93) -2.66798px 1.37182px 0px,
-      rgb(70, 78, 93) -2.96998px 0.42336px 0px,
-      rgb(70, 78, 93) -2.94502px -0.571704px 0px,
-      rgb(70, 78, 93) -2.59586px -1.50383px 0px,
-      rgb(70, 78, 93) -1.96093px -2.27041px 0px,
-      rgb(70, 78, 93) -1.11013px -2.78704px 0px,
-      rgb(70, 78, 93) -0.137119px -2.99686px 0px,
-      rgb(70, 78, 93) 0.850987px -2.87677px 0px,
-      rgb(70, 78, 93) 1.74541px -2.43999px 0px,
-      rgb(70, 78, 93) 2.44769px -1.73459px 0px,
-      rgb(70, 78, 93) 2.88051px -0.838247px 0px;
-    @media (max-width: 480px) {
-      width: 0;
-      margin: 0 auto;
-      #p_player {
-        font-size: 14px;
-      }
-    }
-  } */
-  /* & #p_player {
-    color: #56f350;
-  } */
-  /* & span img {
-    width: 55px;
-    height: 55px;
-    margin-right: 10px;
-  } */
-  /* .menu_icon {
-    @media (max-width: 1025px) {
-      display: none;
-    }
-  } */
 `;
 
 const UlNav = styled.ul`
-  /* @media (min-width: 1025px) {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-    padding: 10px;
-    width: 60%;
-  } */
   @media (max-width: 1024px) {
     margin: 0 auto;
     display: flex;

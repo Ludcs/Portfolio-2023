@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import BgSpace from '../assets/background-pixelart.png';
 import MyFace from '../assets/my-face.png';
 import Stars from '../assets/three-stars.png';

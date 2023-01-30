@@ -52,7 +52,7 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
             </Link>
           </span>
           <p>
-            <span id="p_player">PLAYER 1:</span> <span>Lucho Dc</span>
+            <span id="p_player">PLAYER 1:</span> <span>Lucho DC</span>
           </p>
           <Music />
           <UlNav>
@@ -99,7 +99,6 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
 };
 
 const Nav = styled.nav`
-  /* width: 1160px; */
   max-width: 1200px;
   height: 100px;
   display: flex;
@@ -111,54 +110,6 @@ const Nav = styled.nav`
   z-index: 1;
   left: 0;
   right: 0;
-
-  /* @media (max-width: 480px) {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } */
-  /* @media (max-width: 1024px) {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-    margin: 0 auto;
-    background-color: rgb(1, 35, 69);
-    background: linear-gradient(
-      0deg,
-      rgba(1, 35, 69, 1) 0%,
-      rgba(1, 71, 145, 1) 35%,
-      rgba(61, 136, 187, 1) 100%
-    );
-    .notonmobile {
-      display: none;
-    }
-    .languageContainer {
-      width: 100%;
-      height: 50px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-end;
-      position: absolute;
-      bottom: 0px;
-      margin-left: auto;
-      margin-right: auto;
-      p {
-        color: yellow;
-        font-size: 12px;
-      }
-    }
-  } */
   & p {
     width: 25%;
     margin-right: 10px;
@@ -182,13 +133,6 @@ const Nav = styled.nav`
       rgb(70, 78, 93) 1.74541px -2.43999px 0px,
       rgb(70, 78, 93) 2.44769px -1.73459px 0px,
       rgb(70, 78, 93) 2.88051px -0.838247px 0px;
-    /* @media (max-width: 480px) {
-      width: 0;
-      margin: 0 auto;
-      #p_player {
-        font-size: 14px;
-      }
-    } */
   }
   & #p_player {
     color: #56f350;
@@ -198,11 +142,6 @@ const Nav = styled.nav`
     height: 55px;
     margin-right: 10px;
   }
-  /* .menu_icon {
-    @media (max-width: 1025px) {
-      display: none;
-    }
-  } */
 `;
 
 const UlNav = styled.ul`
@@ -213,26 +152,9 @@ const UlNav = styled.ul`
   list-style: none;
   padding: 10px;
   width: 60%;
-
-  /* @media (max-width: 1024px) {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-  } */
   & a {
     color: inherit;
     text-decoration: none;
-    /* @media (max-width: 480px) {
-      font-size: 16px;
-    } */
-    /* @media (min-width: 768px) and (max-width: 1024px) {
-      font-size: 22px;
-      letter-spacing: 5px;
-    } */
   }
   & li {
     text-decoration: none;
@@ -256,8 +178,5 @@ const UlNav = styled.ul`
       rgb(70, 78, 93) 1.74541px -2.43999px 0px,
       rgb(70, 78, 93) 2.44769px -1.73459px 0px,
       rgb(70, 78, 93) 2.88051px -0.838247px 0px;
-    /* @media (max-width: 480px) {
-      font-size: 16px;
-    } */
   }
 `;

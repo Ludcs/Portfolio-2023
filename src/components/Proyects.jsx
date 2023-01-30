@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import BgClouds from '../assets/cloud-bg.jpg';
 import {motion as m} from 'framer-motion';
 import {MarqueeFooter} from './MarqueeFooter';
-
 import Project1 from '../assets/img_project_0.jpg';
 import Project2 from '../assets/img_project_01.jpg';
 import Project3 from '../assets/img_project_5.jpg';

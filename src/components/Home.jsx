@@ -20,7 +20,7 @@ export const Home = () => {
         >
           <MainContainer>
             <DivName>
-              <h1>Hi there! I'm:</h1>
+              <h1>It's me, Lucho! I'm:</h1>
               <h3>
                 <Typewriter
                   options={{
@@ -109,6 +109,7 @@ const DivName = styled.div`
   background-color: transparent;
   width: 530px;
   h1 {
+    font-size: 26px;
     text-shadow: #07468a 3px 0px 0px, #07468a 2.83487px 0.981584px 0px,
       #07468a 2.35766px 1.85511px 0px, #07468a 1.62091px 2.52441px 0px,
       #07468a 0.705713px 2.91581px 0px, #07468a -0.287171px 2.98622px 0px,
@@ -129,7 +130,7 @@ const DivName = styled.div`
     gap: 10px;
     margin-top: 50px;
     & h1 {
-      font-size: 18px;
+      font-size: 16px;
       margin: 0;
     }
     & h3 {
@@ -144,7 +145,7 @@ const DivName = styled.div`
     text-align: center;
     padding-bottom: 70px;
     & h1 {
-      font-size: 30px;
+      font-size: 26px;
     }
     & h3 {
       font-size: 24px;

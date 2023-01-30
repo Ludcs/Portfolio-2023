@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {motion as m} from 'framer-motion';
-import {Navbar} from './Navbar';
 import {MarqueeFooter} from './MarqueeFooter';
-
 import BgForest from '../assets/forest-bg.jpg';
 
 export const Me = ({meText}) => {
@@ -20,18 +18,19 @@ export const Me = ({meText}) => {
             <div>
               <p>
                 A front-end web developer from Argentina who loves technology
-                and the internet. Video game player from a very young age.
+                and the internet ecosystem. Video game player from a very very
+                young age.
               </p>
               <p>
                 I enjoy learning and creating new things. I enjoy sharing good
-                beer and good music with friends.
+                beer and good music with my homies.
               </p>
               <p>
                 I am curious, competitive, patient and self-demanding. I am many
-                more things, but...
+                more things...
               </p>
               <p>
-                i am... <span>HUMAN AFTER ALL!</span>
+                I am... <span>HUMAN AFTER ALL!</span>
               </p>
             </div>
           </TextContainer>
@@ -80,8 +79,6 @@ const TextContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-
-    /* height: 800px; */
     margin: 0 auto;
   }
 

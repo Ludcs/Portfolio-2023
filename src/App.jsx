@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setSayHello(false);
-    }, 2200);
+    }, 1800);
   }, []);
 
   useEffect(() => {

@@ -6,12 +6,12 @@ export const MarqueeFooter = ({proyectsText, meText, homeText}) => {
     <MarqueeComp className="overlay" direction={'right'}>
       <h4>
         {homeText &&
-          'Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth - Another day on planet earth -'}
+          'Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina -'}
 
         {proyectsText &&
           'Making things happen - Making things happen - Making things happen - Making things happen - Making things happen - Making things happen - Making things happen -'}
         {meText &&
-          'Being human after all - Being human after all - Being human after all - Being human after all - Being human after all - Being human after all - Being human after all -'}
+          'Human after all - Human after all - Human after all - Human after all - Human after all - Human after all - Human after all -'}
       </h4>
     </MarqueeComp>
   );
@@ -64,7 +64,7 @@ export const MarqueeComp = styled(Marquee)`
     }
     height: 80px;
     h4 {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 `;

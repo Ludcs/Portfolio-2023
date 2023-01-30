@@ -1,6 +1,5 @@
 import React, {useRef, useState} from 'react';
 import styled from 'styled-components';
-
 import {Howl, Howler} from 'howler';
 import Play from '../assets/play-music-modified.png';
 import Pause from '../assets/pause-music-modified.png';
