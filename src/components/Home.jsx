@@ -71,6 +71,13 @@ const HomeContainer = styled.div`
 
   @media (max-width: 480px) {
     background-position: 25% 70%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
