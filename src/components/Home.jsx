@@ -59,28 +59,21 @@ export const Home = () => {
 };
 
 const HomeContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100vh;
   background-image: url(${BgSpace});
   background-position: center;
   background-repeat: no-repeat;
-
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  min-width: 350px;
+  position: relative;
   @media (max-width: 480px) {
-    background-image: url(${BgSpace});
     background-position: 25% 70%;
-    background-repeat: no-repeat;
-    /* background-size: 360px 640px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     width: 100%;
     height: 100vh;
-    /* overflow-y: hidden; */
+    min-width: 350px;
+    overflow-y: hidden;
+    position: relative;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
@@ -91,22 +84,22 @@ const HomeContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  min-width: 350px;
-  max-width: 1200px;
-  width: 1200px;
-  height: 500px;
-  /* margin: 0 auto; */
-  /* height: 100vh; */
-
+  @media (min-width: 1000px) and (max-width: 1368px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
   @media (max-width: 480px) {
+    width: 100%;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 100%; */
+    /* height: 100vh; */
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     flex-direction: column;
@@ -137,12 +130,14 @@ const DivName = styled.div`
   }
   @media (max-width: 480px) {
     width: 100%;
+    height: 40vh;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* margin-bottom: 50px; */
+
     & h1 {
       font-size: 16px;
       margin: 0;
@@ -157,7 +152,7 @@ const DivName = styled.div`
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     text-align: center;
-    /* padding-bottom: 70px; */
+
     & h1 {
       font-size: 26px;
     }
@@ -204,7 +199,6 @@ const DivImage = styled.div`
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
   @media (max-width: 480px) {
-    /* margin-bottom: 50px; */
     width: 100%;
     height: 100%;
     display: flex;
