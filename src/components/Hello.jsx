@@ -27,18 +27,16 @@ const HelloContainer = styled.div`
   background-repeat: no-repeat;
   @media (max-width: 480px) {
     background-image: url(${BgSpace});
-    /* background-position: center; */
     background-repeat: no-repeat;
     background-position: 25% 70%;
     width: 100%;
     min-width: 350px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* height: 100vh; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
@@ -75,7 +73,7 @@ const HelloContainer = styled.div`
     @media (max-width: 480px) {
       font-size: 16px;
       line-height: 32px;
-      letter-spacing: 8px;
+      letter-spacing: 2px;
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 24px;
@@ -91,4 +89,7 @@ const StarsImg = styled.img`
   border-radius: 0px !important;
   width: auto;
   height: 150px;
+  @media (max-width: 480px) {
+    height: 100px;
+  }
 `;

@@ -73,7 +73,7 @@ const HomeContainer = styled.div`
     background-image: url(${BgSpace});
     background-position: 25% 70%;
     background-repeat: no-repeat;
-    background-size: 360px 640px;
+    /* background-size: 360px 640px; */
     display: flex;
     justify-content: center;
     align-items: center;
