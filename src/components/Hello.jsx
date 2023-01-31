@@ -31,6 +31,9 @@ const BgContainer = styled.div`
     min-width: 350px;
     overflow-y: hidden;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    background-size: cover;
+  }
 `;
 
 const HelloContainer = styled.div`
@@ -43,16 +46,7 @@ const HelloContainer = styled.div`
     width: 100%;
     height: 100%;
   }
-
-  /* width: 100%; */
-  /* height: 100vh; */
-  /* background-image: url(${BgSpace});
-  background-position: center;
-  background-repeat: no-repeat; */
   @media (max-width: 480px) {
-    /* background-image: url(${BgSpace}); */
-    /* background-repeat: no-repeat; */
-    /* background-position: 25% 70%; */
     width: 100%;
     min-width: 350px;
     display: flex;
@@ -60,15 +54,15 @@ const HelloContainer = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* overflow: hidden; */
-    /* height: 100vh; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
   }
   @media (min-width: 768px) and (max-width: 1024px) {
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
     & p {
       font-size: 24px;
     }
