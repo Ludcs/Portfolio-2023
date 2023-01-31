@@ -22,8 +22,8 @@ const BgContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-width: 350px;
   height: 100vh;
+  min-width: 350px;
   @media (max-width: 480px) {
     background-position: 25% 70%;
     width: 100%;
