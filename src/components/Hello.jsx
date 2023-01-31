@@ -7,11 +7,11 @@ import Stars from '../assets/three-stars.png';
 export const Hello = () => {
   return (
     <BgContainer>
-      <HelloContainer>
+      {/* <HelloContainer>
         <p>PLAYERS GONNA PLAY</p>
         <img src={MyFace} alt="My pic profile" />
         <StarsImg src={Stars} alt="Three stars" />
-      </HelloContainer>
+      </HelloContainer> */}
     </BgContainer>
   );
 };
@@ -26,6 +26,7 @@ const BgContainer = styled.div`
   @media (max-width: 480px) {
     background-position: 25% 70%;
     width: 100%;
+    height: 100vh;
     min-width: 350px;
   }
 `;
@@ -52,13 +53,11 @@ const HelloContainer = styled.div`
     /* background-position: 25% 70%; */
     width: 100%;
     min-width: 350px;
-    height: 600px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 500px; */
+    height: 550px;
     /* overflow: hidden; */
     /* height: 100vh; */
     /* display: flex; */
