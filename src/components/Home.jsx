@@ -73,13 +73,14 @@ const HomeContainer = styled.div`
     background-image: url(${BgSpace});
     background-position: 25% 70%;
     background-repeat: no-repeat;
+    background-size: 360px 640px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
