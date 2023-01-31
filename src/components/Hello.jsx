@@ -7,11 +7,11 @@ import Stars from '../assets/three-stars.png';
 export const Hello = () => {
   return (
     <BgContainer>
-      {/* <HelloContainer>
+      <HelloContainer>
         <p>PLAYERS GONNA PLAY</p>
         <img src={MyFace} alt="My pic profile" />
         <StarsImg src={Stars} alt="Three stars" />
-      </HelloContainer> */}
+      </HelloContainer>
     </BgContainer>
   );
 };
@@ -59,7 +59,7 @@ const HelloContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 550px;
+    height: 100vh;
     /* overflow: hidden; */
     /* height: 100vh; */
     /* display: flex; */
