@@ -6,31 +6,59 @@ import Stars from '../assets/three-stars.png';
 
 export const Hello = () => {
   return (
-    <HelloContainer>
-      <p>PLAYERS GONNA PLAY</p>
-      <img src={MyFace} alt="My pic profile" />
-      <StarsImg src={Stars} alt="Three stars" />
-    </HelloContainer>
+    <BgContainer>
+      <HelloContainer>
+        <p>PLAYERS GONNA PLAY</p>
+        <img src={MyFace} alt="My pic profile" />
+        <StarsImg src={Stars} alt="Three stars" />
+      </HelloContainer>
+    </BgContainer>
   );
 };
 
-const HelloContainer = styled.div`
-  width: 100%;
-  min-width: 350px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const BgContainer = styled.div`
   background-image: url(${BgSpace});
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  min-width: 350px;
   @media (max-width: 480px) {
-    background-image: url(${BgSpace});
-    background-repeat: no-repeat;
     background-position: 25% 70%;
     width: 100%;
     min-width: 350px;
+  }
+`;
+
+const HelloContainer = styled.div`
+  @media (min-width: 1000px) and (max-width: 1368px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* width: 100%; */
+  /* height: 100vh; */
+  /* background-image: url(${BgSpace});
+  background-position: center;
+  background-repeat: no-repeat; */
+  @media (max-width: 480px) {
+    /* background-image: url(${BgSpace}); */
+    /* background-repeat: no-repeat; */
+    /* background-position: 25% 70%; */
+    width: 100%;
+    min-width: 350px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 500px; */
     /* overflow: hidden; */
     /* height: 100vh; */
     /* display: flex; */
