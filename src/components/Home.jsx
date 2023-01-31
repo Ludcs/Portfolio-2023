@@ -99,7 +99,7 @@ const MainContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
+    gap: 10px;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     flex-direction: column;
@@ -130,7 +130,7 @@ const DivName = styled.div`
   }
   @media (max-width: 480px) {
     width: 100%;
-    height: 40vh;
+    height: 200px;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
@@ -199,8 +199,8 @@ const DivImage = styled.div`
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
   @media (max-width: 480px) {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,8 +232,8 @@ const DivImage = styled.div`
       }
     }
     @media (max-width: 480px) {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
       @keyframes float {
         0% {
