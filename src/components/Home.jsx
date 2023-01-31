@@ -79,7 +79,7 @@ const HomeContainer = styled.div`
     position: relative;
     width: 100%;
     height: 100vh;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
