@@ -26,6 +26,9 @@ const HelloContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   @media (max-width: 480px) {
+    background-image: url(${BgSpace});
+    /* background-position: center; */
+    background-repeat: no-repeat;
     background-position: 25% 70%;
     width: 100%;
     min-width: 350px;

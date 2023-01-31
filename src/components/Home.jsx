@@ -70,6 +70,7 @@ const HomeContainer = styled.div`
   background-repeat: no-repeat;
 
   @media (max-width: 480px) {
+    background-image: url(${BgSpace});
     background-position: 25% 70%;
     background-repeat: no-repeat;
     display: flex;
@@ -78,7 +79,7 @@ const HomeContainer = styled.div`
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
@@ -104,7 +105,7 @@ const MainContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 600px; */
+    /* height: 100%; */
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     flex-direction: column;
