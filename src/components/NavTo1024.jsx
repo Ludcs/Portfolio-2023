@@ -99,9 +99,6 @@ const Nav = styled.nav`
       rgba(1, 71, 145, 1) 35%,
       rgba(61, 136, 187, 1) 100%
     );
-    .notonmobile {
-      display: none;
-    }
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     position: absolute;
@@ -122,9 +119,6 @@ const Nav = styled.nav`
       rgba(1, 71, 145, 1) 35%,
       rgba(61, 136, 187, 1) 100%
     );
-    .notonmobile {
-      display: none;
-    }
   }
 `;
 

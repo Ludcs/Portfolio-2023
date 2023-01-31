@@ -35,7 +35,7 @@ const HelloContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
-    overflow-y: hidden;
+    overflow: hidden;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
