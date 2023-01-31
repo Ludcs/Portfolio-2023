@@ -20,9 +20,10 @@ const BgContainer = styled.div`
   background-image: url(${BgSpace});
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 100vh;
   min-width: 350px;
+  height: 100vh;
   @media (max-width: 480px) {
     background-position: 25% 70%;
     width: 100%;
