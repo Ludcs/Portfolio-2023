@@ -4,29 +4,29 @@ import styled from 'styled-components';
 import {Music} from './Music';
 import {MenuIcon} from './MenuIcon';
 
-export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
+export const NavTo1024 = () => {
   const [clickedNav, setClickedNav] = useState(false);
 
   let activeStyle = {
     color: 'yellow',
   };
 
-  const changeToHome = () => {
-    setHomeText(true);
-    setClickedNav(false);
-  };
+  // const changeToHome = () => {
+  //   setHomeText(true);
+  //   setClickedNav(false);
+  // };
 
-  const changeToProyects = () => {
-    setHomeText(false);
-    setProyectsText(true);
-    setClickedNav(false);
-  };
+  // const changeToProyects = () => {
+  //   setHomeText(false);
+  //   // setProyectsText(true);
+  //   setClickedNav(false);
+  // };
 
-  const changeToMe = () => {
-    setHomeText(false);
-    setMeText(true);
-    setClickedNav(false);
-  };
+  // const changeToMe = () => {
+  //   setHomeText(false);
+  //   setMeText(true);
+  //   setClickedNav(false);
+  // };
 
   return (
     <>
@@ -39,7 +39,7 @@ export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/"
-                onClick={changeToHome}
+                onClick={() => setClickedNav(false)}
               >
                 Home
               </NavLink>
@@ -49,7 +49,7 @@ export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/proyects"
-                onClick={changeToProyects}
+                onClick={() => setClickedNav(false)}
               >
                 Portfolio
               </NavLink>
@@ -59,7 +59,7 @@ export const NavTo1024 = ({setHomeText, setProyectsText, setMeText}) => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/me"
-                onClick={changeToMe}
+                onClick={() => setClickedNav(false)}
               >
                 Me
               </NavLink>

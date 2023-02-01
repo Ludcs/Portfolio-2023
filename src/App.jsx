@@ -15,14 +15,13 @@ function App() {
   const [proyectsText, setProyectsText] = useState(false);
   const [meText, setMeText] = useState(false);
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     setTimeout(() => {
       setSayHello(false);
     }, 1800);
   }, []);
 
+  const navigate = useNavigate();
   useEffect(() => {
     navigate('/', {replace: true});
   }, []);
@@ -57,7 +56,7 @@ function App() {
             animate={{opacity: 1}}
             transition={{duration: 0.5, ease: 'easeInOut'}}
           >
-            <MarqueeFooter homeText={homeText} />
+            <MarqueeFooter homeText={homeText} meText={meText} />
           </m.div>
         </>
       )}

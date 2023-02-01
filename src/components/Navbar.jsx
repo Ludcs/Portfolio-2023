@@ -28,19 +28,19 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
     color: 'yellow',
   };
 
-  const changeToHome = () => {
-    setHomeText(true);
-  };
+  // const changeToHome = () => {
+  //   setHomeText(true);
+  // };
 
-  const changeToProyects = () => {
-    setHomeText(false);
-    setProyectsText(true);
-  };
+  // const changeToProyects = () => {
+  //   setHomeText(false);
+  //   setProyectsText(true);
+  // };
 
-  const changeToMe = () => {
-    setHomeText(false);
-    setMeText(true);
-  };
+  // const changeToMe = () => {
+  //   setHomeText(false);
+  //   setMeText(true);
+  // };
 
   return (
     <>
@@ -60,7 +60,7 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/"
-                onClick={changeToHome}
+                // onClick={changeToHome}
               >
                 Home
               </NavLink>
@@ -70,7 +70,7 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/proyects"
-                onClick={changeToProyects}
+                // onClick={changeToProyects}
               >
                 Portfolio
               </NavLink>
@@ -80,7 +80,7 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/me"
-                onClick={changeToMe}
+                // onClick={changeToMe}
               >
                 Me
               </NavLink>
@@ -89,9 +89,9 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
         </Nav>
       ) : (
         <NavTo1024
-          setHomeText={setHomeText}
-          setProyectsText={setProyectsText}
-          setMeText={setMeText}
+        // setHomeText={setHomeText}
+        // setProyectsText={setProyectsText}
+        // setMeText={setMeText}
         />
       )}
     </>

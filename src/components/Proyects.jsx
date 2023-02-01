@@ -81,7 +81,7 @@ export const Proyects = ({proyectsText}) => {
             </a>
           </p>
         </MainContainer>
-        <MarqueeFooter proyectsText={proyectsText} />
+        {/* <MarqueeFooter proyectsText={proyectsText} /> */}
       </ProyectsContainer>
     </>
   );

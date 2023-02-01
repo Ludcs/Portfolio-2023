@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 import Marquee from 'react-fast-marquee';
+import {useLocation} from 'react-router-dom';
 
-export const MarqueeFooter = ({proyectsText, meText, homeText}) => {
+export const MarqueeFooter = () => {
+  const {pathname} = useLocation();
+
   return (
     <MarqueeComp className="overlay" direction={'right'}>
       <h4>
-        {homeText &&
+        {pathname === '/' &&
           'Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina -'}
 
-        {proyectsText &&
+        {pathname === '/proyects' &&
           'Making things happen - Making things happen - Making things happen - Making things happen - Making things happen - Making things happen - Making things happen -'}
-        {meText &&
+        {pathname === '/me' &&
           'Human after all - Human after all - Human after all - Human after all - Human after all - Human after all - Human after all -'}
       </h4>
     </MarqueeComp>

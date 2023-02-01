@@ -4,7 +4,7 @@ import {motion as m} from 'framer-motion';
 import {MarqueeFooter} from './MarqueeFooter';
 import BgForest from '../assets/forest-bg.jpg';
 
-export const Me = ({meText}) => {
+export const Me = () => {
   return (
     <>
       <MeContainer>
@@ -34,7 +34,7 @@ export const Me = ({meText}) => {
             </p>
           </div>
         </TextContainer>
-        <MarqueeFooter meText={meText} />
+        {/* <MarqueeFooter meText={meText} /> */}
         {/* </m.div> */}
       </MeContainer>
     </>
