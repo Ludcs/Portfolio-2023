@@ -34,6 +34,9 @@ const BgContainer = styled.div`
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
   }
+  @media (min-width: 1000px) and (max-width: 1368px) {
+    background-position: 25% 75%;
+  }
 `;
 
 const HelloContainer = styled.div`
