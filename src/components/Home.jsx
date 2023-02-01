@@ -110,10 +110,11 @@ const MainContainer = styled.div`
     gap: 10px;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 100%;
   }
 `;
 
@@ -215,7 +216,7 @@ const DivImage = styled.div`
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 100%;
-    height: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;

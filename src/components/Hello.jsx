@@ -9,7 +9,7 @@ export const Hello = () => {
     <BgContainer>
       <HelloContainer>
         <p>PLAYERS GONNA PLAY</p>
-        <img src={MyFace} alt="My pic profile" />
+        <img id="myface" src={MyFace} alt="My pic profile" />
         <StarsImg src={Stars} alt="Three stars" />
       </HelloContainer>
     </BgContainer>
@@ -37,6 +37,15 @@ const BgContainer = styled.div`
 `;
 
 const HelloContainer = styled.div`
+  @media (min-width: 1369px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+  }
   @media (min-width: 1000px) and (max-width: 1368px) {
     display: flex;
     flex-direction: column;
@@ -65,6 +74,10 @@ const HelloContainer = styled.div`
     height: 100%;
     & p {
       font-size: 24px;
+    }
+    & #myface {
+      width: 400px;
+      height: 400px;
     }
   }
   @media (min-width: 1000px) and (max-width: 1368px) {
@@ -114,5 +127,8 @@ const StarsImg = styled.img`
   height: 150px;
   @media (max-width: 480px) {
     height: 100px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    height: 250px;
   }
 `;

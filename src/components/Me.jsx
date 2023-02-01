@@ -41,7 +41,6 @@ const MeContainer = styled.div`
   height: 100vh;
   min-width: 350px;
   position: relative;
-
   @media (max-width: 480px) {
     background-position: 65% 70%;
     width: 100%;
@@ -142,8 +141,6 @@ const TextContainer = styled.div`
     font-size: 18px;
     line-height: 35px;
     letter-spacing: 1.5px;
-    padding-left: 50px;
-    padding-right: 50px;
   }
   & span {
     text-shadow: #f077f9 3px 0px 0px, #f077f9 2.83487px 0.981584px 0px,
