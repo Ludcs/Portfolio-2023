@@ -81,7 +81,7 @@ const TextContainer = styled.div`
   }
   @media (max-width: 480px) {
     width: 100%;
-    height: 100%;
+    height: 550px;
     min-width: 350px;
     display: flex;
     flex-direction: column;
