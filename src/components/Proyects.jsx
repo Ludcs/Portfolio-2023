@@ -81,28 +81,39 @@ export const Proyects = ({proyectsText}) => {
             </a>
           </p>
         </MainContainer>
-        {/* <MarqueeFooter proyectsText={proyectsText} /> */}
       </ProyectsContainer>
     </>
   );
 };
 
 const ProyectsContainer = styled.div`
+  background-image: url(${BgClouds});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  min-width: 350px;
+  position: relative;
   /* box-sizing: border-box;
   padding: 0;
-  margin: 0 auto; */
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(${BgClouds});
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
   @media (max-width: 480px) {
     background-position: 8% 70%;
+    width: 100%;
+    height: 100vh;
+    min-width: 350px;
+    overflow-y: hidden;
+    position: relative;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
@@ -113,18 +124,22 @@ const ProyectsContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
+  @media (min-width: 1000px) and (max-width: 1368px) {
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 350px;
-  max-width: 1200px;
-  width: 1200px;
-  height: 500px;
   margin: 0 auto;
-  /* height: 100vh; */
+  width: 100%;
+  height: 100%;
   @media (max-width: 480px) {
     width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   & h1 {
@@ -133,6 +148,8 @@ export const MainContainer = styled.div`
       font-size: 12px;
       text-align: center;
       padding: 0px 10px 0px 10px;
+      margin: 0;
+      margin-bottom: 10px;
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 18px;
@@ -168,6 +185,7 @@ export const MainContainer = styled.div`
     @media (max-width: 480px) {
       font-size: 12px;
       text-align: center;
+      margin: 0;
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 18px;
@@ -219,16 +237,17 @@ const SectionProyects = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;
   @media (max-width: 480px) {
-    width: 90%;
-    height: 65vh;
+    width: 250px;
+    height: 350px;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 15px;
     margin: 0 auto;
-    margin-top: 0;
+    margin-bottom: 10px;
+    /* margin-top: 0;
     margin-bottom: 0;
-    padding: 10px;
+    padding: 10px; */
     overflow-y: scroll;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -259,6 +278,7 @@ const SectionProyects = styled.div`
     border-radius: 10px;
     @media (max-width: 480px) {
       box-shadow: none;
+      width: 250px;
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 400px;
@@ -311,7 +331,7 @@ const SectionProyects = styled.div`
           #f077f9 1.74541px -2.43999px 0px, #f077f9 2.44769px -1.73459px 0px,
           #f077f9 2.88051px -0.838247px 0px;
         @media (max-width: 480px) {
-          font-size: 14px;
+          font-size: 12px;
         }
       }
       & p {
