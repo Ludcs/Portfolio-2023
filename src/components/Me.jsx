@@ -9,7 +9,6 @@ export const Me = () => {
     <>
       <MeContainer>
         <TextContainer>
-          {/* <div> */}
           <h1>Okay! A little bit about me:</h1>
           <p>
             A front-end web developer from Argentina who loves technology and
@@ -27,7 +26,6 @@ export const Me = () => {
           <p>
             I am... <span>HUMAN AFTER ALL!</span>
           </p>
-          {/* </div> */}
         </TextContainer>
       </MeContainer>
     </>
@@ -43,14 +41,7 @@ const MeContainer = styled.div`
   height: 100vh;
   min-width: 350px;
   position: relative;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat; */
+
   @media (max-width: 480px) {
     background-position: 65% 70%;
     width: 100%;
@@ -68,17 +59,17 @@ const MeContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  @media (min-width: 1000px) and (max-width: 1368px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 350px;
-    max-width: 1200px;
-    width: 1200px;
-    height: 500px;
-    text-align: center;
-  }
+  min-width: 350px;
+  max-width: 1200px;
+  width: 1200px;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
   @media (max-width: 480px) {
     width: 100%;
     height: 550px;
@@ -115,9 +106,6 @@ const TextContainer = styled.div`
       text-align: center;
       margin: 0;
       margin-bottom: 20px;
-      /* margin-top: 50px;
-      margin-bottom: 0px;
-      padding: 0px 10px 0px 10px; */
     }
   }
   & p {
@@ -170,13 +158,3 @@ const TextContainer = styled.div`
       #f077f9 2.88051px -0.838247px 0px;
   }
 `;
-
-/* & div {
-    display: inline-grid;
-    width: 100%;
-    gap: 30px;
-    @media (min-width: 768px) and (max-width: 1024px) {
-      width: 100%;
-      margin: 0 auto;
-    }
-  } */

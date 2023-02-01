@@ -6,7 +6,7 @@ import Project1 from '../assets/img_project_0.jpg';
 import Project2 from '../assets/img_project_01.jpg';
 import Project3 from '../assets/img_project_5.jpg';
 
-export const Proyects = ({proyectsText}) => {
+export const Proyects = () => {
   return (
     <>
       <ProyectsContainer>
@@ -227,7 +227,7 @@ export const MainContainer = styled.div`
 
 const SectionProyects = styled.div`
   width: 1200px;
-  height: 500px;
+  /* height: 500px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -245,9 +245,6 @@ const SectionProyects = styled.div`
     gap: 15px;
     margin: 0 auto;
     margin-bottom: 10px;
-    /* margin-top: 0;
-    margin-bottom: 0;
-    padding: 10px; */
     overflow-y: scroll;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -269,6 +266,8 @@ const SectionProyects = styled.div`
     margin: 0 auto;
     padding-bottom: 25px;
     padding-top: 25px;
+    justify-content: center;
+    align-items: center;
   }
   & div {
     position: relative;
@@ -286,6 +285,10 @@ const SectionProyects = styled.div`
       position: relative;
       box-shadow: none;
       border-radius: 10px;
+    }
+    @media (min-width: 1025px) and (max-width: 1368px) {
+      width: 300px;
+      height: 300px;
     }
     & img {
       width: 100%;

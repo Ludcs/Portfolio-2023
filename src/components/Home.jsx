@@ -84,12 +84,20 @@ const HomeContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
+  @media (min-width: 1369px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+  }
   @media (min-width: 1000px) and (max-width: 1368px) {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
+    max-width: 1200px;
     height: 100%;
   }
   @media (max-width: 480px) {
@@ -114,7 +122,7 @@ const DivName = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 350px;
-  gap: 30px;
+  /* gap: 30px; */
   h1 {
     font-size: 26px;
     text-shadow: #07468a 3px 0px 0px, #07468a 2.83487px 0.981584px 0px,
