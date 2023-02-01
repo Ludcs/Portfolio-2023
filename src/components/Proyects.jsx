@@ -110,7 +110,7 @@ const ProyectsContainer = styled.div`
   @media (max-width: 480px) {
     background-position: 8% 70%;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     min-width: 350px;
     overflow-y: hidden;
     position: relative;
@@ -135,11 +135,11 @@ export const MainContainer = styled.div`
   height: 100%;
   @media (max-width: 480px) {
     width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 575px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
   }
 
   & h1 {
@@ -149,7 +149,7 @@ export const MainContainer = styled.div`
       text-align: center;
       padding: 0px 10px 0px 10px;
       margin: 0;
-      margin-bottom: 10px;
+      /* margin-bottom: 10px; */
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 18px;
@@ -278,7 +278,7 @@ const SectionProyects = styled.div`
     border-radius: 10px;
     @media (max-width: 480px) {
       box-shadow: none;
-      width: 250px;
+      width: 210px;
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 400px;

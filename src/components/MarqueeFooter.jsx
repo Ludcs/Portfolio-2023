@@ -48,7 +48,7 @@ export const MarqueeComp = styled(Marquee)`
   @media (max-width: 480px) {
     position: absolute;
     bottom: 0px;
-    height: 60px;
+    height: 50px;
     .overlay::after {
       width: 70px;
     }
