@@ -5,7 +5,7 @@ import Joy from '../assets/joystick-modified.png';
 import {Music} from './Music';
 import {NavTo1024} from './NavTo1024';
 
-export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
+export const Navbar = () => {
   const [isGreaterThan1024px, setIsGreaterThan1024px] = useState(false);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export const Navbar = ({setHomeText, setProyectsText, setMeText}) => {
       {isGreaterThan1024px ? (
         <Nav>
           <span>
-            <Link to={'/'} onClick={() => setHomeText(true)}>
+            <Link to={'/'}>
               <img style={{marginTop: '-5px'}} src={Joy} alt="Joystick Nes" />
             </Link>
           </span>

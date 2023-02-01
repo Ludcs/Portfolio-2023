@@ -11,9 +11,6 @@ import {Navbar} from './components/Navbar';
 
 function App() {
   const [sayHello, setSayHello] = useState(true);
-  const [homeText, setHomeText] = useState(true);
-  const [proyectsText, setProyectsText] = useState(false);
-  const [meText, setMeText] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -37,18 +34,11 @@ function App() {
             animate={{opacity: 1}}
             transition={{duration: 0.5, ease: 'easeInOut'}}
           >
-            <Navbar
-              setHomeText={setHomeText}
-              setProyectsText={setProyectsText}
-              setMeText={setMeText}
-            />
+            <Navbar />
             <Routes>
-              <Route exact path="/*" element={<Home homeText={homeText} />} />
-              <Route
-                path="/proyects"
-                element={<Proyects proyectsText={proyectsText} />}
-              />
-              <Route path="/me" element={<Me meText={meText} />} />
+              <Route exact path="/*" element={<Home />} />
+              <Route path="/proyects" element={<Proyects />} />
+              <Route path="/me" element={<Me />} />
             </Routes>
           </m.div>
           <m.div
@@ -56,7 +46,7 @@ function App() {
             animate={{opacity: 1}}
             transition={{duration: 0.5, ease: 'easeInOut'}}
           >
-            <MarqueeFooter homeText={homeText} meText={meText} />
+            <MarqueeFooter />
           </m.div>
         </>
       )}

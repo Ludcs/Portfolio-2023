@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect';
-import {motion as m} from 'framer-motion';
+// import {motion as m} from 'framer-motion';
 import SoftDev from '../assets/soft-developer-pixel-art.png';
 import GithubIcon from '../assets/github-icon.png';
 import LinkedinIcon from '../assets/linkedin-icon.png';
