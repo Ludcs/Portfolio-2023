@@ -1,6 +1,7 @@
 import {useState} from 'react';
-import {NavLink, Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
+import {motion as m, AnimatePresence} from 'framer-motion';
 import {Music} from './Music';
 import {MenuIcon} from './MenuIcon';
 
@@ -11,63 +12,59 @@ export const NavTo1024 = () => {
     color: 'yellow',
   };
 
-  // const changeToHome = () => {
-  //   setHomeText(true);
-  //   setClickedNav(false);
-  // };
-
-  // const changeToProyects = () => {
-  //   setHomeText(false);
-  //   // setProyectsText(true);
-  //   setClickedNav(false);
-  // };
-
-  // const changeToMe = () => {
-  //   setHomeText(false);
-  //   setMeText(true);
-  //   setClickedNav(false);
-  // };
-
   return (
     <>
       <Music />
+      <AnimatePresence>
+        {clickedNav && (
+          <m.div
+            initial={{height: 0, opacity: 0}}
+            animate={{
+              opacity: 1,
+              zIndex: 1,
+              position: 'absolute',
+              left: 0,
+              right: 0,
+            }}
+            transition={{duration: 0.3}}
+            exit={{opacity: 0}}
+          >
+            <Nav>
+              <UlNav>
+                <li>
+                  <NavLink
+                    style={({isActive}) => (isActive ? activeStyle : undefined)}
+                    to="/"
+                    onClick={() => setClickedNav(false)}
+                  >
+                    Home
+                  </NavLink>
+                </li>
 
-      {clickedNav && (
-        <Nav>
-          <UlNav>
-            <li>
-              <NavLink
-                style={({isActive}) => (isActive ? activeStyle : undefined)}
-                to="/"
-                onClick={() => setClickedNav(false)}
-              >
-                Home
-              </NavLink>
-            </li>
+                <li>
+                  <NavLink
+                    style={({isActive}) => (isActive ? activeStyle : undefined)}
+                    to="/proyects"
+                    onClick={() => setClickedNav(false)}
+                  >
+                    Portfolio
+                  </NavLink>
+                </li>
 
-            <li>
-              <NavLink
-                style={({isActive}) => (isActive ? activeStyle : undefined)}
-                to="/proyects"
-                onClick={() => setClickedNav(false)}
-              >
-                Portfolio
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
-                style={({isActive}) => (isActive ? activeStyle : undefined)}
-                to="/me"
-                onClick={() => setClickedNav(false)}
-              >
-                Me
-              </NavLink>
-            </li>
-          </UlNav>
-        </Nav>
-      )}
-
+                <li>
+                  <NavLink
+                    style={({isActive}) => (isActive ? activeStyle : undefined)}
+                    to="/me"
+                    onClick={() => setClickedNav(false)}
+                  >
+                    Me
+                  </NavLink>
+                </li>
+              </UlNav>
+            </Nav>
+          </m.div>
+        )}
+      </AnimatePresence>
       <MenuIcon setClickedNav={setClickedNav} clickedNav={clickedNav} />
     </>
   );
@@ -75,12 +72,6 @@ export const NavTo1024 = () => {
 
 const Nav = styled.nav`
   @media (min-width: 350px) and (max-width: 480px) {
-    /* width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; */
-
     position: absolute;
     z-index: 1;
     left: 0;

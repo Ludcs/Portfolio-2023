@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {motion as m} from 'framer-motion';
-import {MarqueeFooter} from './MarqueeFooter';
 import BgForest from '../assets/forest-bg.jpg';
 
 export const Me = () => {

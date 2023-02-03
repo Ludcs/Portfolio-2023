@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import BgClouds from '../assets/cloud-bg.jpg';
-import {MarqueeFooter} from './MarqueeFooter';
 import Project1 from '../assets/img_project_0.jpg';
 import Project2 from '../assets/img_project_01.jpg';
 import Project3 from '../assets/img_project_5.jpg';
@@ -95,22 +94,10 @@ const ProyectsContainer = styled.div`
   height: 100vh;
   min-width: 350px;
   position: relative;
-  /* box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat; */
 
   @media (max-width: 480px) {
     background-position: 8% 70%;
     width: 100%;
-    /* height: 100vh; */
     min-width: 350px;
     overflow-y: hidden;
     position: relative;
@@ -136,10 +123,6 @@ export const MainContainer = styled.div`
   @media (max-width: 480px) {
     width: 100%;
     height: 575px;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
   }
 
   & h1 {
@@ -149,7 +132,6 @@ export const MainContainer = styled.div`
       text-align: center;
       padding: 0px 10px 0px 10px;
       margin: 0;
-      /* margin-bottom: 10px; */
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 18px;
@@ -227,7 +209,6 @@ export const MainContainer = styled.div`
 
 const SectionProyects = styled.div`
   width: 1200px;
-  /* height: 500px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;

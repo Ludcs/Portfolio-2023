@@ -1,5 +1,4 @@
 import {Routes, Route, useNavigate} from 'react-router-dom';
-// import './App.css';
 import {Hello} from './components/Hello';
 import {useState, useEffect} from 'react';
 import {motion as m} from 'framer-motion';
@@ -12,12 +11,6 @@ import {Navbar} from './components/Navbar';
 function App() {
   const [sayHello, setSayHello] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setSayHello(false);
-    }, 1800);
-  }, []);
-
   const navigate = useNavigate();
   useEffect(() => {
     navigate('/', {replace: true});
@@ -26,7 +19,7 @@ function App() {
   return (
     <>
       {sayHello ? (
-        <Hello />
+        <Hello setSayHello={setSayHello} />
       ) : (
         <>
           <m.div

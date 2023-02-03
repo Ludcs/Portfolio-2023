@@ -4,13 +4,16 @@ import BgSpace from '../assets/background-pixelart.png';
 import MyFace from '../assets/my-face.png';
 import Stars from '../assets/three-stars.png';
 
-export const Hello = () => {
+export const Hello = ({setSayHello}) => {
   return (
     <BgContainer>
       <HelloContainer>
         <p>PLAYERS GONNA PLAY</p>
         <img id="myface" src={MyFace} alt="My pic profile" />
         <StarsImg src={Stars} alt="Three stars" />
+        <p id="pressStart" onClick={() => setSayHello(false)}>
+          PRESS START
+        </p>
       </HelloContainer>
     </BgContainer>
   );
@@ -121,6 +124,20 @@ const HelloContainer = styled.div`
   & img {
     opacity: 0.8;
     border-radius: 50%;
+  }
+  #pressStart {
+    cursor: pointer;
+    animation: taadaa 1s ease-out infinite;
+
+    @keyframes taadaa {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
   }
 `;
 

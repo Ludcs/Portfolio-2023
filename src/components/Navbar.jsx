@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
+import {motion as m} from 'framer-motion';
 import {NavLink, Link} from 'react-router-dom';
 import Joy from '../assets/joystick-modified.png';
 import {Music} from './Music';
@@ -28,20 +29,6 @@ export const Navbar = () => {
     color: 'yellow',
   };
 
-  // const changeToHome = () => {
-  //   setHomeText(true);
-  // };
-
-  // const changeToProyects = () => {
-  //   setHomeText(false);
-  //   setProyectsText(true);
-  // };
-
-  // const changeToMe = () => {
-  //   setHomeText(false);
-  //   setMeText(true);
-  // };
-
   return (
     <>
       {isGreaterThan1024px ? (
@@ -60,7 +47,6 @@ export const Navbar = () => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/"
-                // onClick={changeToHome}
               >
                 Home
               </NavLink>
@@ -70,7 +56,6 @@ export const Navbar = () => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/proyects"
-                // onClick={changeToProyects}
               >
                 Portfolio
               </NavLink>
@@ -80,7 +65,6 @@ export const Navbar = () => {
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
                 to="/me"
-                // onClick={changeToMe}
               >
                 Me
               </NavLink>
@@ -88,11 +72,7 @@ export const Navbar = () => {
           </UlNav>
         </Nav>
       ) : (
-        <NavTo1024
-        // setHomeText={setHomeText}
-        // setProyectsText={setProyectsText}
-        // setMeText={setMeText}
-        />
+        <NavTo1024 />
       )}
     </>
   );
