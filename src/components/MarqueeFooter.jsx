@@ -11,7 +11,7 @@ export const MarqueeFooter = () => {
         {pathname === '/' &&
           'Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina - Hello from Argentina -'}
 
-        {pathname === '/proyects' &&
+        {pathname === '/projects' &&
           'Making things happen - Making things happen - Making things happen - Making things happen - Making things happen - Making things happen - Making things happen -'}
         {pathname === '/me' &&
           'Human after all - Human after all - Human after all - Human after all - Human after all - Human after all - Human after all -'}

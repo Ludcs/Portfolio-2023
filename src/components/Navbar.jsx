@@ -55,7 +55,7 @@ export const Navbar = () => {
             <li>
               <NavLink
                 style={({isActive}) => (isActive ? activeStyle : undefined)}
-                to="/proyects"
+                to="/projects"
               >
                 Portfolio
               </NavLink>

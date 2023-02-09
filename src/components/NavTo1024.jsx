@@ -44,7 +44,7 @@ export const NavTo1024 = () => {
                 <li>
                   <NavLink
                     style={({isActive}) => (isActive ? activeStyle : undefined)}
-                    to="/proyects"
+                    to="/projects"
                     onClick={() => setClickedNav(false)}
                   >
                     Portfolio
