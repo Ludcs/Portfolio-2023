@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import BgClouds from '../assets/cloud-bg.jpg';
 import Project1 from '../assets/img_project_0.jpg';
-import Project2 from '../assets/img_project_01.jpg';
+import Project2 from '../assets/HomePage2.jpg';
 import Project3 from '../assets/img_project_5.jpg';
 
 export const Proyects = () => {
@@ -13,9 +13,28 @@ export const Proyects = () => {
           <h1>These are some of the projects i've done recently</h1>
           <SectionProyects>
             <div>
-              <img src={Project1} alt="Project 1" />
+              <img src={Project2} alt="Project 1" />
               <div>
-                <p id="title_project">E-Commerce - Cart</p>
+                <p id="title_project">E-commerce F.T.B</p>
+                <p>Vite + React + Firebase + Tailwind</p>
+                <p>
+                  <a href="https://ecommerce-2-23.vercel.app" target={'_blank'}>
+                    PLAY
+                  </a>{' '}
+                  -{' '}
+                  <a
+                    href="https://github.com/Ludcs/ecommerce-2-23"
+                    target={'_blank'}
+                  >
+                    VIEW CODE
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src={Project1} alt="Project 2" />
+              <div>
+                <p id="title_project">Estampitiency</p>
                 <p>Vite + React + ChakraUi</p>
                 <p>
                   <a
@@ -27,25 +46,6 @@ export const Proyects = () => {
                   -{' '}
                   <a
                     href="https://github.com/Ludcs/carrito-simple"
-                    target={'_blank'}
-                  >
-                    VIEW CODE
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div>
-              <img src={Project2} alt="Project 2" />
-              <div>
-                <p id="title_project">Landing Page Layout</p>
-                <p>Vite + React + ChakraUi</p>
-                <p>
-                  <a href="https://sunnyside-dun.vercel.app/" target={'_blank'}>
-                    PLAY
-                  </a>{' '}
-                  -{' '}
-                  <a
-                    href="https://github.com/Ludcs/ChakraUi-primer-practica"
                     target={'_blank'}
                   >
                     VIEW CODE
