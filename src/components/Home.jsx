@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 import SoftDev from '../assets/soft-developer-pixel-art.png';
 import GithubIcon from '../assets/github-icon.png';
 import LinkedinIcon from '../assets/linkedin-icon.png';
-import CvPdf from '../assets/cv/Luciano-De-Carolis-CV.pdf';
+import CvPdf from '../assets/cv/CV-Luciano De Carolis.pdf';
 import CvIcon from '../assets/cv-icon.png';
 import BgSpace from '../assets/background-pixelart.png';
 
