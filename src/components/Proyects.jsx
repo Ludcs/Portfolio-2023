@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import BgClouds from '../assets/cloud-bg.jpg';
 import Project1 from '../assets/img_project_0.jpg';
 import Project2 from '../assets/HomePage2.jpg';
-import Project3 from '../assets/img_project_5.jpg';
+import Project3 from '../assets/img_project_5b.jpg';
 
 export const Proyects = () => {
   return (
@@ -16,7 +16,7 @@ export const Proyects = () => {
               <img src={Project2} alt="Project 1" />
               <div>
                 <p id="title_project">E-commerce F.T.B</p>
-                <p>Vite + React + Firebase + Tailwind</p>
+                <p>React + Firebase + Tailwind</p>
                 <p>
                   <a href="https://ecommerce-2-23.vercel.app" target={'_blank'}>
                     PLAY
@@ -35,7 +35,7 @@ export const Proyects = () => {
               <img src={Project1} alt="Project 2" />
               <div>
                 <p id="title_project">Estampitiency</p>
-                <p>Vite + React + ChakraUi</p>
+                <p>React + ChakraUi</p>
                 <p>
                   <a
                     href="https://carrito-simple-ludc.vercel.app/"
@@ -56,17 +56,20 @@ export const Proyects = () => {
             <div>
               <img src={Project3} alt="Project 3" />
               <div>
-                <p id="title_project">Adviency Calendar</p>
-                <p>React + styled-components</p>
+                <p id="title_project">Medical Patients</p>
+                <p>M.E.R.N + Tailwind</p>
                 <p>
                   <a
-                    href="https://adviency-luciano-dc.vercel.app/"
+                    href="https://medical-patients-frontend.onrender.com/"
                     target={'_blank'}
                   >
                     PLAY
                   </a>{' '}
                   -{' '}
-                  <a href="https://github.com/Ludcs/adviency" target={'_blank'}>
+                  <a
+                    href="https://github.com/Ludcs/medical-patients-mern"
+                    target={'_blank'}
+                  >
                     VIEW CODE
                   </a>
                 </p>
