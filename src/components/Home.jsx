@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 import SoftDev from '../assets/soft-developer-pixel-art.png';
 import GithubIcon from '../assets/github-icon.png';
 import LinkedinIcon from '../assets/linkedin-icon.png';
-import CvPdf from '../assets/cv/CV-Luciano De Carolis.pdf';
+import CvPdf from '../assets/cv/CV - Luciano De Carolis.pdf';
 import CvIcon from '../assets/cv-icon.png';
 import BgSpace from '../assets/background-pixelart.png';
 
@@ -19,7 +19,7 @@ export const Home = () => {
               <Typewriter
                 options={{
                   strings: [
-                    'Frontend Developer',
+                    'Fullstack Js Developer',
                     'Video Games Lover',
                     'Beer & Music Lover',
                   ],
@@ -29,9 +29,13 @@ export const Home = () => {
                 }}
               />
             </h3>
-            <p style={{fontSize: '12px'}}>
-              <span style={{color: 'yellow'}}>JavaScript</span> -{' '}
-              <span style={{color: 'aqua'}}>React</span>
+            <p style={{ fontSize: '12px' }}>
+              <span style={{ color: 'aqua' }}>React</span> -{' '}
+              <span style={{ color: 'rgba(255, 255, 255, 0.87)' }}>Next</span> -{' '}
+              <span style={{ color: '#56f350' }}>Node</span> -{' '}
+              <span style={{ color: 'rgba(255, 255, 255, 0.87)' }}>
+                Express
+              </span>
             </p>
             <IconsContainer>
               <a href="https://github.com/Ludcs" target={'_blank'}>

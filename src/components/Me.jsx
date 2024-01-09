@@ -9,9 +9,8 @@ export const Me = () => {
         <TextContainer>
           <h1>Okay! A little bit about me:</h1>
           <p>
-            A front-end web developer from Argentina who loves technology and
-            the internet ecosystem. Video game player from a very very young
-            age.
+            A fullstack js developer from Argentina who loves technology and the
+            internet ecosystem. Video game player from a very very young age.
           </p>
           <p>
             I enjoy learning and creating new things. I enjoy sharing good beer
