@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import BgClouds from '../assets/cloud-bg.jpg';
-import Project1 from '../assets/img_project_0.jpg';
+import Project1 from '../assets/03.png';
 import Project2 from '../assets/HomePage2.jpg';
 import Project3 from '../assets/img_project_5b.jpg';
 
@@ -34,18 +34,18 @@ export const Proyects = () => {
             <div>
               <img src={Project1} alt="Project 2" />
               <div>
-                <p id="title_project">Estampitiency</p>
-                <p>React + ChakraUi</p>
+                <p id="title_project">Elite Knights Gym</p>
+                <p>MySQL+Express+Next+Tailwind</p>
                 <p>
                   <a
-                    href="https://carrito-simple-ludc.vercel.app/"
+                    href="https://www.youtube.com/watch?v=m4zLLE-5mTE&ab_channel=LuchanoEsteban"
                     target={'_blank'}
                   >
-                    PLAY
+                    VIDEO DEMO
                   </a>{' '}
                   -{' '}
                   <a
-                    href="https://github.com/Ludcs/carrito-simple"
+                    href="https://github.com/Ludcs/gym-fs-app"
                     target={'_blank'}
                   >
                     VIEW CODE
