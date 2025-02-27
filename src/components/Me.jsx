@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import BgForest from '../assets/forest-bg.jpg';
+import React from "react";
+import styled from "styled-components";
+import BgForest from "../assets/forest-bg.jpg";
 
 export const Me = () => {
   return (
@@ -9,16 +9,17 @@ export const Me = () => {
         <TextContainer>
           <h1>Okay! A little bit about me:</h1>
           <p>
-            A fullstack js developer from Argentina who loves technology and the
-            internet ecosystem. Video game player from a very very young age.
+            A software developer from Argentina who loves technology and the
+            internet ecosystem. A video game player since a very, very young
+            age.
           </p>
           <p>
-            I enjoy learning and creating new things. I enjoy sharing good beer
+            I enjoy learning and creating new things. I love sharing good beer
             and good music with my homies.
           </p>
           <p>
-            I am curious, competitive, patient and self-demanding. I am many
-            more things...
+            I am curious. I am competitive. I am patient. I am self-demanding. I
+            am many more things...
           </p>
           <p>
             I am... <span>HUMAN AFTER ALL!</span>

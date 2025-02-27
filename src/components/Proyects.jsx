@@ -1,16 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import BgClouds from '../assets/cloud-bg.jpg';
-import Project1 from '../assets/03.png';
-import Project2 from '../assets/HomePage2.jpg';
-import Project3 from '../assets/img_project_5b.jpg';
+import React from "react";
+import styled from "styled-components";
+import BgClouds from "../assets/cloud-bg.jpg";
+import Project1 from "../assets/03.png";
+import Project2 from "../assets/HomePage2.jpg";
+import Project3 from "../assets/img_project_5b.jpg";
 
 export const Proyects = () => {
   return (
     <>
       <ProyectsContainer>
         <MainContainer>
-          <h1>These are some of the projects i've done recently</h1>
+          <h1>Check out some of the projects I've done</h1>
           <SectionProyects>
             <div>
               <img src={Project2} alt="Project 1" />
@@ -18,13 +18,13 @@ export const Proyects = () => {
                 <p id="title_project">E-commerce F.T.B</p>
                 <p>React + Firebase + Tailwind</p>
                 <p>
-                  <a href="https://ecommerce-2-23.vercel.app" target={'_blank'}>
+                  <a href="https://ecommerce-2-23.vercel.app" target={"_blank"}>
                     PLAY
-                  </a>{' '}
-                  -{' '}
+                  </a>{" "}
+                  -{" "}
                   <a
                     href="https://github.com/Ludcs/ecommerce-2-23"
-                    target={'_blank'}
+                    target={"_blank"}
                   >
                     VIEW CODE
                   </a>
@@ -39,14 +39,14 @@ export const Proyects = () => {
                 <p>
                   <a
                     href="https://www.youtube.com/watch?v=m4zLLE-5mTE&ab_channel=LuchanoEsteban"
-                    target={'_blank'}
+                    target={"_blank"}
                   >
                     VIDEO DEMO
-                  </a>{' '}
-                  -{' '}
+                  </a>{" "}
+                  -{" "}
                   <a
                     href="https://github.com/Ludcs/gym-fs-app"
-                    target={'_blank'}
+                    target={"_blank"}
                   >
                     VIEW CODE
                   </a>
@@ -61,14 +61,14 @@ export const Proyects = () => {
                 <p>
                   <a
                     href="https://medical-patients-frontend.onrender.com/"
-                    target={'_blank'}
+                    target={"_blank"}
                   >
                     PLAY
-                  </a>{' '}
-                  -{' '}
+                  </a>{" "}
+                  -{" "}
                   <a
                     href="https://github.com/Ludcs/medical-patients-mern"
-                    target={'_blank'}
+                    target={"_blank"}
                   >
                     VIEW CODE
                   </a>
@@ -77,8 +77,8 @@ export const Proyects = () => {
             </div>
           </SectionProyects>
           <p id="seemore">
-            See more on my{' '}
-            <a href="https://github.com/Ludcs" target={'_blank'}>
+            See more on my{" "}
+            <a href="https://github.com/Ludcs" target={"_blank"}>
               GitHub
             </a>
           </p>
